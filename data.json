@@ -1,0 +1,57 @@
+{
+"nav":[
+    {   "id":0,
+         "title":"产品咨询",
+        "info":[
+            {"id":0,"product-id":"笔记本电脑"},
+            {"id":1,"product-id":"桌面电脑"},
+            {"id":2,"product-id":"主板"},
+            {"id":3,"product-id":"显卡"},
+            {"id":4,"product-id":"显示器"},
+            {"id":5,"product-id":"电竞周边"},
+            {"id":6,"product-id":"龙魂周边"},
+            {"id":7,"product-id":"工控计算机"}
+
+        ]
+        
+
+    },
+    {   "id":1,
+        "title":"ODM方案",
+        "info":[
+            {   "title":"服务器&网络设备",
+                "link":"https://eps.msi.com/cn"
+            }
+            
+        ]
+        
+        
+
+    },
+    {   "id":2,
+        "title":"社群媒体",
+        "info":[
+            {"id":0,"info":"新闻"},
+            {"id":1,"info":"论坛"},
+            {"id":2,"info":"电竞战队"},
+            {"id":3,"info":"影音中心"}
+        ]
+        
+    },
+    {   "id":3,
+        "title":"活动&促销",
+        "info":[
+            {"id":0,"info":"电竞魂"},
+            {"id":1,"info":"当前活动"},
+            {"id":2,"info":"未来动态"},
+            {"id":3,"info":"博客"}
+        ]
+
+    },   
+    {   "id":4,
+        "title":"客户服务",
+        "link":"https://cn.msi.com/support/"
+    }
+]
+
+}

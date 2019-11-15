@@ -1,0 +1,571 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/index-min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/require.js" async="true" defer data-main="js/main"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="header-nav">
+            <div id="header-address-container">
+                <div id="address-show">青岛市</div>
+                <div id="address-triangle" class="iconfont" >&#xeb1f;</div>
+                <div id="address-select">
+                    <div id="address-select-close"><p>请选择您所在的收货地区</p><button id="close">X</button></div>
+                     <div id = 'address-select-button'>
+                        <button class = 'active'>省份</button>
+                        <button id="city">城市</button>
+                        <div id="address-select-province"><ul>
+                            <!-- <li class="clicked"> <a href=""> 北京市</a></li>
+                            <li > <a href=""> 天津市</a></li>
+                            <li > <a href=""> 河北省</a></li>
+                            <li > <a href=""> 山西省</a></li>
+                            <li > <a href=""> 内蒙古...</a></li>
+                            <li > <a href=""> 辽宁省</a></li>
+                            <li > <a href=""> 吉林省</a></li>
+                            <li > <a href=""> 黑龙江省</a></li>
+                            <li > <a href=""> 上海市</a></li>
+                            <li > <a href=""> 江苏省</a></li>
+                            <li > <a href=""> 浙江省</a></li>
+                            <li > <a href=""> 安徽省</a></li>
+                            <li > <a href=""> 福建省</a></li>
+                            <li > <a href=""> 江西省</a></li>
+                            <li > <a href=""> 山东省</a></li>
+                            <li > <a href=""> 河南省</a></li>
+                            <li > <a href=""> 湖北省</a></li>
+                            <li > <a href=""> 湖南省</a></li>
+                            <li > <a href=""> 广东省</a></li>
+                            <li > <a href=""> 广西壮族自治区</a></li>
+                            <li > <a href=""> 海南省</a></li>
+                            <li > <a href=""> 重庆市</a></li>
+                            <li > <a href=""> 四川省</a></li>
+                            <li > <a href=""> 贵州省</a></li>
+                            <li > <a href=""> 云南省</a></li>
+                            <li > <a href=""> 西藏自</a>...</li>
+                            <li > <a href=""> 陕西省</a></li>
+                            <li > <a href=""> 甘肃省</a></li>
+                            <li > <a href=""> 青海省</a></li>
+                            <li > <a href=""> 宁夏回族自治区</a></li>
+                            <li > <a href=""> 新疆维吾尔族自治区</a></li> -->
+                        </ul>
+                        </div>
+                        <div id="address-select-city"><ul>
+
+                            
+                        </ul></div>
+                        
+                </div>
+                </div>
+            </div>
+            <div id="header-list"><ul>
+                <li id="more" class="iconfont"><a href="">更多&#xeb1f;</a>
+                <div id="more-div">
+                    <div id="more-div-corp"><div class="more-div-title">合作专区</div>
+                    <div><span><a href="">联名卡申请</a></span><span><a href="">唯名卡</a></span></div></div>
+                    <div id="more-div-us"><div class="more-div-title" >关于我们</div>
+                    <div><span><a href="">Sell on vip</a></span><span><a href="">品牌招商</a></span><span><a href="">官方博客</a></span></div></div>
+                </div>
+            
+            </li>
+                <li id="mobile"> <a href="" class="iconfont">&#xe615;手机版</a>
+                
+                <div id="mobile-div">
+                    <div id="mobile-div-QRcode"><img src="img/1466134037230.jpg" alt=""></div>
+                    <div id="mobile-div-word"><a href="">随时逛 及时抢</a></div>
+                </div></li>
+                <li id="client"><a href="" class="iconfont">客户服务&#xeb1f;</a>
+                    <ul id="client-ul">
+                            <li> <a href="">联系客服</a></li>
+                            <li> <a href="">帮助中心</a></li>
+                            <li> <a href="">服务中心</a></li>
+                            <li> <a href="">知识产权投诉</a></li>
+                        </ul></li>
+                <li id="club"> <a href="" class="iconfont">会员俱乐部&#xeb1f;</a>
+                    <ul id="club-ul">
+                            <li><a href="">俱乐部首页</a></li>
+                            <li> <a href="">唯品币兑换</a></li>
+                            
+                        </ul>
+                </li>
+                <li id="sale"> <a href=""class="iconfont">我的特卖&#xeb1f;</a>
+                        <ul id="sale-ul">
+                            <li><a href="">商品收藏</a></li>
+                            <li><a href="">品牌收藏</a></li>
+                            <li><a href="">我的足迹</a></li>
+                        </ul>
+                
+                </li>
+                <li id="order"><a href="">我的订单</a></li>
+                <li id="signup"><a href=""><img src="img/header_sign_hash_0459d02c.gif" alt="">签到有礼</a>
+                    <div id="signup-div">
+                        <div id="signup-div-circle"><span class="iconfont">&#xe758;</span><b>———</b>
+                            <span class="iconfont">&#xe758;</span><b>———</b>
+                            <span class="iconfont">&#xe758;</span><b>———</b>
+                            <span class="iconfont">&#xe758;</span><b>———</b>
+                            <span class="iconfont">&#xe758;</span><b>———</b>
+                            <span class="iconfont">&#xe758;</span><b>———</b>
+                            <span class="iconfont">&#xe758;</span>
+                    <div id="signup-div-days"><em>1天</em>
+                    <em>2天</em>
+                    <em>3天</em>
+                    <em>4天</em>
+                    <em>5天</em>
+                    <em>6天</em>
+                    <em>7天</em></div>
+                    </div>
+                        <div id="signup-div-button"><span>每天签到送惊喜，连续签到更享心动奖励</span> <button class="btn btn-danger">签到</button></div>
+
+                    </div></li>
+                <li id="register"> <a href="">注册</a></li>
+                <li id="login"> <a href="">登陆</a> 
+                    <div id="login-div">
+                      <div id="login-div-piclog"><img src="img/my_cnt_pic.jpg" alt=""><span>您好！[<a href="">请登录</a>]</span></div>
+                      <div id="login-div-others">
+                          <ul>
+                          <li> <a href="">我的订单</a></li>
+                          <li> <a href="">我的收藏</a></li>
+                          <li> <a href="">我的优惠券</a></li>
+                          <li> <a href="">零钱</a></li>
+                          <li> <a href="">唯品金融</a></li>
+                          <li> <a href="">我的唯品币</a></li>
+                      </ul></div>  
+                    </div>  </li>
+           
+            
+            
+            
+           
+            
+            
+        </ul></div>
+        </div>
+    </div>
+    <div id="logo-background">
+        <div id="logo">
+        <div id="logo-logo"><img src="https://b.appsimg.com/upload/momin/2019/11/06/58/1573025578681.gif" alt=""></div>
+        <div id="logo-link"><a href="" id="logo-a1"></a>
+        <a href="" id="logo-a2"></a>
+        <a href="" id="logo-a3"></a><img src="https://b.appsimg.com/upload/momin/2019/06/24/19/1561344075509.png" alt=""></div>
+        <div id="logo-search">
+            <form action="" id="logo-form">
+                <input type="text" placeholder="唯品快抢" id="logo-input">
+                <button id="logo-button" class="iconfont">&#xe63d;</button>
+            </form>
+            <div id="logo-extra"><ul>
+                <li class="logo-extra-pink"><a href="">唯品快抢</a></li>
+                <li class="logo-extra-pink"><a href="">大牌特卖</a></li>
+                <li class="logo-extra-pink"> <a href="">三折封顶</a></li>
+                <li><a href="">女式大衣</a></li>
+                <li id="logo-extra-last-li"><a href="">女士羽绒服</a></li>
+            </ul></div>
+        </div>
+        <div id="logo-cart" ><button class="iconfont">&#xe60c;购物车 <span id="logo-cart-span"><span id="logo-cart-num">0</span></span></button></div>
+    </div>
+    </div>
+    <div id="nav">
+        <ul id="nav-ul">
+            <li id="nav-li-cate-name"><a href=""><img src="https://b.appsimg.com/upload/momin/2018/09/10/150/1536548648745.png" alt="">商品分类</a>
+            <ul id="nav-ul-category-ul">
+                <!-- <li><a href="">女装/男装/内衣</a></li>
+                <li><a href="">女鞋/男鞋/箱包</a></li>
+                <li><a href="">护肤彩妆/个护</a></li>
+                <li><a href="">运动户外</a></li>
+                <li><a href="">家电数码</a></li>
+                <li><a href="">母婴童装</a></li>
+                <li><a href="">手表配饰</a></li>
+                <li><a href="">居家用品</a></li>
+                <li><a href="">唯品生活</a></li>
+                <li><a href="">唯品国际/唯品奢</a></li>
+                <li><a href="">医药健康</a></li> -->
+            </ul>
+            <div id="nav-ul-category-container">
+                 <!-- <div class="nav-ul-category-list active">
+                    <dl class="nav-ul-category-title " ><div class="nav-dt"><dt>人气美衣&gt;</dt></div>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                    
+                    </dl>
+                
+                    <dl class="nav-ul-category-title " ><div class="nav-dt"><dt>人气美衣&gt;</dt></div>
+                        <div class="nav-dd"><dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                    </div>
+                    </dl>
+                </div> -->
+                <!-- <div class="nav-ul-category-list">
+                    <dl class="nav-ul-category-title " ><dt>人衣&gt;</dt>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                    </dl>
+                    
+                    <dl class="nav-ul-category-title " ><dt>气美衣&gt;</dt>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                        <dd><a href="">羽绒服</a></dd>
+                    </dl>
+                    </div>
+                    <div class="nav-ul-category-list">
+                        <dl class="nav-ul-category-title " ><dt>美衣&gt;</dt>
+                            <dd><a href="">羽绒服</a></dd>
+                            <dd><a href="">羽绒服</a></dd>
+                            <dd><a href="">羽绒服</a></dd>
+                            <dd><a href="">羽绒服</a></dd>
+                        </dl>
+                        
+                        <dl class="nav-ul-category-title " ><dt>人美衣&gt;</dt>
+                            <dd><a href="">羽绒服</a></dd>
+                            <dd><a href="">羽绒服</a></dd>
+                            <dd><a href="">羽绒服</a></dd>
+                            <dd><a href="">羽绒服</a></dd>
+                        </dl>
+                        </div> -->
+                    
+                 
+            </div>
+            <div id="nav-ul-category-picture"></div>
+            
+            </li>
+
+            <li><a href=""><img src="img/1542896193724.gif" alt="">11.11来了</a></li>
+            <li><a href="">最后疯抢</a></li>
+            <li><a href="">唯品快抢</a></li>
+            <li><a href="">女装</a></li>
+            <li><a href="">母婴</a></li>
+            <li><a href="">家电</a></li>
+            <li><a href="">国际</a></li>
+            <li><a href="">美妆</a></li>
+            <li><a href="">鞋包</a></li>
+            <li><a href="">男装</a></li>
+            <li><a href="">预告</a></li>
+            <li><a href="" class="iconfont" id="nav-more">更多&#xeb1f;</a>
+            
+                <ul id="nav-more-ul">
+                    <li><a href="">运动</a></li>
+                    <li><a href="">家居</a></li>
+                    <li><a href="">生活</a></li>
+                    <li><a href="">配饰</a></li>
+                    <li><a href="">唯品·奢</a></li>
+                    <li><a href="">扶贫</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="banner">
+        <!-- 图片位置 -->
+        <div id="banner-circle"> 
+                <a href="" ></a>
+                <a href="" ></a>
+                <a href="" ></a>
+                <a href="" ></a>
+                
+       </div>
+    </div>
+    <!-- 商品位置 -->
+    <div id="goods">
+    <div id="goods-range">
+    <div id="deals-picture" class="goods-type">
+        <div class="goods-image">
+        <img src="https://a.vpimg3.com/upload/dop/2019/05/23/118/count_topfive.png" alt="">
+        <div class="deals-countdown"><span>00</span><span>00</span><span>00</span></div>
+        <div></div>
+        </div>  
+        <ul id="special-goods">
+            <!-- <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+            </li>
+            <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+            </li>
+            <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+            </li>
+            <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+            </li> -->
+        </ul>
+    </div>
+    <div id="global" class="goods-type">
+            <div class="img-frame">
+            <img src="https://a.vpimg4.com/upload/dop/2016/04/12/157/vipglobal_hbS_odfu.png" alt="">
+            <div class="goods-link"><a href="" class="iconfont goods-link">全部国际品牌&#xe737;</a></div>
+            </div>
+            <ul id="global-goods">
+                    <!-- <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li> -->
+            </ul>
+    </div>
+    <div id="woman" class="goods-type">
+                    <div class="img-frame">
+                    <img src="https://a.vpimg3.com/upload/dop/2016/03/17/121/woman_2ad.png" alt="">
+                    <div class="goods-link"><a href="" class="iconfont goods-link">全部女装品牌&#xe737;</a></div>
+                </div><ul id="woman-goods">
+                    <!-- <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li> -->
+            </ul>
+    </div>
+    <div id="shoes" class="goods-type">
+           
+            <ul id="shoes-goods">
+                    <!-- <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="" class="goods-title">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span class="discount-color">0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li> -->
+            </ul>
+    </div>
+    <div id="man" class="goods-type">
+            <div class="img-frame">
+                    <img src="https://a.vpimg3.com/upload/dop/2018/02/01/196/men_hhqx.png" alt="">
+                    <div class="goods-link"><a href="" class="iconfont goods-link">全部男装品牌&#xe737;</a></div>
+                </div>
+            <ul id="man-goods">
+                    <!-- <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li> -->
+            </ul>
+    </div>
+    <div id="sports" class="goods-type">
+            <div class="img-frame">
+                    <img src="https://a.vpimg3.com/upload/dop/2016/03/17/183/sport.png" alt="">
+                    <div class="goods-link"><a href="" class="iconfont goods-link">全部运动品牌&#xe737;</a></div>
+                </div>
+            <ul id="sports-goods">
+                    <!-- <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li> -->
+            </ul>
+    </div>
+    <div id="makeup" class="goods-type">
+            <div class="img-frame">
+                    <img src="https://a.vpimg2.com/upload/dop/2016/03/17/116/beauty_wrf.png" alt="">
+                    <div class="goods-link"><a href="" class="iconfont goods-link">全部美妆品牌&#xe737;</a></div>
+                </div>
+            <ul id="makeup-goods">
+                    <!-- <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li>
+                    <li><a href=""><img class="data-img" src="https://c.vpimg1.com/upcb/2019/11/13/129/ias_157363829216237_570x273_90.jpg" alt=""></a>
+                        <div class="iconfont"><a href="">&#xe658;<span>收藏品牌</span></a></div>
+                        <div><a href="">伊芙丽eifini冬狂欢返场女装专场</a></div>
+                        <div><a href=""><span>0.4</span>折起<span>|</span><span>全场折上1.7折起</span></a></div>
+                    </li> -->
+            </ul>
+    </div>
+</div>
+    </div>
+    <div id="footer">
+        <div id="footer-content">
+            <div id="footer-image"><img src="https://shop.vipstatic.com/img/common/footer_vip_iconsv_0705-hash-4a5d3f54.png?357db4e8" alt=""></div>
+            <div id="footer-list"> <dl>
+                <dt>服务保障</dt>
+                <dd><a href="">正品保证</a></dd>
+                <dd><a href="">7天无理由放心退</a></dd>
+                <dd><a href="">退货返10元唯品币</a></dd>
+                <dd><a href="">7X15小时客户服务</a></dd>
+                <dd><a href="">7天无理由随心换</a></dd>
+                <dd><a href=""></a></dd>
+            </dl> 
+            <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="">导航演示</a></dd>
+                    <dd><a href="">订单操作</a></dd>
+                    <dd><a href="">会员注册</a></dd>
+                    <dd><a href="">账户管理</a></dd>
+                    <dd><a href="">收货样品</a></dd>
+                    <dd><a href="">会员等级</a></dd>
+                </dl>
+                <dl>
+                        <dt>支付方式</dt>
+                        <dd><a href="">导航演示</a></dd>
+                        <dd><a href="">订单操作</a></dd>
+                        <dd><a href="">会员注册</a></dd>
+                        <dd><a href="">账户管理</a></dd>
+                        <dd><a href="">收货样品</a></dd>
+                        <dd><a href="">会员等级</a></dd>
+                    </dl>
+                    <dl>
+                            <dt>配送方式</dt>
+                            <dd><a href="">导航演示</a></dd>
+                            <dd><a href="">订单操作</a></dd>
+                            <dd><a href="">会员注册</a></dd>
+                            <dd><a href="">账户管理</a></dd>
+                            <dd><a href="">收货样品</a></dd>
+                            <dd><a href="">会员等级</a></dd>
+                        </dl>
+                        <dl>
+                                <dt>售后服务</dt>
+                                <dd><a href="">导航演示</a></dd>
+                                <dd><a href="">订单操作</a></dd>
+                                <dd><a href="">会员注册</a></dd>
+                                <dd><a href="">账户管理</a></dd>
+                                <dd><a href="">收货样品</a></dd>
+                                <dd><a href="">会员等级</a></dd>
+                            </dl>
+                            <dl>
+                                    <dt>唯品会APP二维码</dt>
+                                    <dd><a href="">导航演示</a></dd>
+                                    <dd><a href="">订单操作</a></dd>
+                                    <dd><a href="">会员注册</a></dd>
+                                    <dd><a href="">账户管理</a></dd>
+                                    <dd><a href="">收货样品</a></dd>
+                                    <dd><a href="">会员等级</a></dd>
+                                </dl>
+        </div>
+            <div id="footer-contact"></div>
+            <div id="footer-info"></div>
+            <div id="footer-police"></div>
+            
+        </div>
+        
+        
+
+
+    </div>
+    <div id="right-menu">
+        <a href="">
+            <div>账号</div>
+        </a>
+        <a href="">
+            <div>购物袋</div>
+        </a>
+        <a href="">
+            <div></div>
+        </a>
+        <a href="">
+            <div></div>
+        </a>
+        <a href="">
+            <div></div>
+        </a>
+        <a href="">
+            <div></div>
+        </a>
+        <a href="">
+            <div></div>
+        </a>
+        <a href="">
+            <div></div>
+        </a>  
+
+    </div>
+</body>
+</html>
