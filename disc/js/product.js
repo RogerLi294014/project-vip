@@ -19,9 +19,8 @@ require.config({
     }
 })
 
-require(["select-city","index","category","tabimage","nav","like","goods","rightmenu"],function(selectCity,index,category,tabimage,nav,like,goods,rightmenu){
+require(["select-city","index","category","nav","rightmenu"],function(selectCity,index,category,tabimage,nav,like,goods,rightmenu){
     nav.ajax();
-    goods.goodsD();
     selectCity.buttonSwitch();
     selectCity.ajax();
     selectCity.select();
@@ -29,9 +28,6 @@ require(["select-city","index","category","tabimage","nav","like","goods","right
     index.headerClick();
     category.category();
     category.touch();
-    tabimage.enterpic();
-    tabimage.bannerTab();
-    like.touch();
     rightmenu.rightmenu()
     
     

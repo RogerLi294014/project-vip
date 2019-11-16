@@ -21,16 +21,16 @@ define(["jquery"],function($){
     
     function bannerTab(){
         var timer=null;
-        var iNow=0;
+        var iNow=-1;
             
             tab()
             timer=setInterval(function(){
-               
-                tab();
                 iNow++;
+                tab();
                 
                 
-            },1500)
+                
+            },2000)
 
         function tab(){
             var imgs=$("#banner .banner-circle-li").find("a")
@@ -42,7 +42,7 @@ define(["jquery"],function($){
                 if(iNow==btns.size()-1){
                     iNow=-1
                 }else if(iNow==btns.size()){
-                    iNow=0  
+                    iNow=0
                 }
             })
             btns.removeClass("banner-circle-active").eq(iNow).addClass("banner-circle-active")
@@ -52,7 +52,7 @@ define(["jquery"],function($){
                 
                 iNow=$(this).index()
                 
-                $("#banner .banner-circle-li a").css("opacity",0.2).hide().eq(iNow).show().stop(true)
+                $("#banner .banner-circle-li a").css("opacity",1).hide().eq(iNow).show().stop(true)
                 return false
             })
        

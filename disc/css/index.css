@@ -436,7 +436,9 @@
       left: 160px;
       top: 43px;
       z-index: 103;
-      box-shadow: gray; }
+      box-shadow: gray;
+      overflow: auto;
+      height: 495px; }
       #nav #nav-ul #nav-ul-category-container .nav-ul-category-list {
         display: none;
         overflow: auto; }
@@ -455,7 +457,7 @@
       #nav #nav-ul .nav-ul-category-title dt, #nav #nav-ul .nav-ul-category-title dd {
         display: inline-block; }
       #nav #nav-ul .nav-ul-category-title dt {
-        margin-right: 30px; }
+        margin-right: 20px; }
       #nav #nav-ul .nav-ul-category-title dd {
         margin: 0 5px;
         font-size: 10px; }
@@ -630,8 +632,90 @@
 #right-menu {
   width: 50px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 150;
-  right: 0;
+  right: 0px;
   top: 0;
-  background-color: greenyellow; }
+  background-color: black; }
+  #right-menu a {
+    text-decoration: none;
+    color: white; }
+  #right-menu .side-move a {
+    color: black;
+    font-size: 13px; }
+  #right-menu #side-move-club {
+    width: 100%;
+    text-align: right;
+    height: 50%; }
+    #right-menu #side-move-club a {
+      color: skyblue; }
+  #right-menu #side-move-info {
+    background-color: silver;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid silver;
+    height: 50%; }
+    #right-menu #side-move-info a {
+      color: black;
+      font-size: 16px;
+      display: block;
+      width: 49%;
+      margin: 0;
+      float: left;
+      background: silver;
+      margin-top: 40px; }
+      #right-menu #side-move-info a i {
+        display: block;
+        text-align: center;
+        font-size: 20px; }
+  #right-menu #side-bar {
+    margin-top: 200px;
+    z-index: 200;
+    width: 50px; }
+  #right-menu #side-bottom-bar {
+    position: absolute;
+    bottom: 0;
+    width: 50px; }
+  #right-menu #side-bar-login {
+    height: 300px;
+    width: 300px; }
+  #right-menu .menu-bag {
+    background: deeppink;
+    padding: 10px 0; }
+  #right-menu .side-move {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    background: white;
+    border: 1px solid silver;
+    left: 0px;
+    padding: 10px;
+    text-align: center;
+    z-index: 10;
+    font-size: 12px;
+    display: none; }
+  #right-menu .side-move-icon {
+    z-index: 999;
+    display: block;
+    height: 100%;
+    width: 50px;
+    padding: 10px 0; }
+  #right-menu .iconfont {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    z-index: 200; }
+    #right-menu .iconfont span {
+      display: block;
+      font-size: 16px; }
+    #right-menu .iconfont #shopping-bag {
+      width: 20px;
+      margin: 0 auto;
+      font-size: 16px; }
+      #right-menu .iconfont #shopping-bag #shopping-bag-num {
+        background: white;
+        height: 20px;
+        border-radius: 50%;
+        color: deeppink;
+        margin: 10px 0; }

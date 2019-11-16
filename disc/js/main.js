@@ -8,7 +8,8 @@ require.config({
         "tabimage":"tabimage",
         "nav":"nav",
         "like":"like",
-        "goods":"goods"
+        "goods":"goods",
+        "rightmenu":"rightmenu"
     },
     shim: {
        
@@ -18,7 +19,7 @@ require.config({
     }
 })
 
-require(["select-city","index","category","tabimage","nav","like","goods"],function(selectCity,index,category,tabimage,nav,like,goods){
+require(["select-city","index","category","tabimage","nav","like","goods","rightmenu"],function(selectCity,index,category,tabimage,nav,like,goods,rightmenu){
     nav.ajax();
     goods.goodsD();
     selectCity.buttonSwitch();
@@ -31,6 +32,7 @@ require(["select-city","index","category","tabimage","nav","like","goods"],funct
     tabimage.enterpic();
     tabimage.bannerTab();
     like.touch();
+    rightmenu.rightmenu()
     
     
 })
