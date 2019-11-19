@@ -22,7 +22,7 @@ define(["jquery"],function($){
                         title.appendTo(div).find(num);
 
                         var span=titleinfo[j].info
-                        console.log(titleinfo[j].id)
+                        
                         for(var k=0;k<span.length;k++){
                             var newspan=$(`<dd><a href="">${span[k]}</a></dd>`)
                             var spannum=$(`${titleinfo[j].id}`)
@@ -50,7 +50,10 @@ define(["jquery"],function($){
 
     }
 
+    
+
     return{
         ajax:ajax
+       
     }
 })

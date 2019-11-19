@@ -1,7 +1,7 @@
 define(["jquery"],function($){
     function touch(){
         var lis=$("#goods-range ul ");
-        console.log(lis)
+       
         lis.on("mouseenter","li",function(){
             $(this).stop(true).animate({
                 opacity:0.7

@@ -118,7 +118,7 @@ $("#nav-more").on("mouseenter",function(){
 }).on("mouseleave",function(){
 $("#nav-more-ul").hide();
 $("#nav-more").css({
-    "background-color":"burlywood",
+    "background-color":"#f5f5f5",
     "borderRight":"",
     "borderLeft":""
 })

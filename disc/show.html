@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/show-min.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/require.js" async="true" defer data-main="js/show"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div id="header">
+                <div id="header-nav">
+                    <div id="header-address-container">
+                        <div id="address-show">青岛市</div>
+                        <div id="address-triangle" class="iconfont" >&#xeb1f;</div>
+                        <div id="address-select">
+                            <div id="address-select-close"><p>请选择您所在的收货地区</p><button id="close">X</button></div>
+                             <div id = 'address-select-button'>
+                                <button class = 'active'>省份</button>
+                                <button id="city">城市</button>
+                                <div id="address-select-province"><ul>
+                                    <!-- <li class="clicked"> <a href=""> 北京市</a></li>
+                                    <li > <a href=""> 天津市</a></li>
+                                    <li > <a href=""> 河北省</a></li>
+                                    <li > <a href=""> 山西省</a></li>
+                                    <li > <a href=""> 内蒙古...</a></li>
+                                    <li > <a href=""> 辽宁省</a></li>
+                                    <li > <a href=""> 吉林省</a></li>
+                                    <li > <a href=""> 黑龙江省</a></li>
+                                    <li > <a href=""> 上海市</a></li>
+                                    <li > <a href=""> 江苏省</a></li>
+                                    <li > <a href=""> 浙江省</a></li>
+                                    <li > <a href=""> 安徽省</a></li>
+                                    <li > <a href=""> 福建省</a></li>
+                                    <li > <a href=""> 江西省</a></li>
+                                    <li > <a href=""> 山东省</a></li>
+                                    <li > <a href=""> 河南省</a></li>
+                                    <li > <a href=""> 湖北省</a></li>
+                                    <li > <a href=""> 湖南省</a></li>
+                                    <li > <a href=""> 广东省</a></li>
+                                    <li > <a href=""> 广西壮族自治区</a></li>
+                                    <li > <a href=""> 海南省</a></li>
+                                    <li > <a href=""> 重庆市</a></li>
+                                    <li > <a href=""> 四川省</a></li>
+                                    <li > <a href=""> 贵州省</a></li>
+                                    <li > <a href=""> 云南省</a></li>
+                                    <li > <a href=""> 西藏自</a>...</li>
+                                    <li > <a href=""> 陕西省</a></li>
+                                    <li > <a href=""> 甘肃省</a></li>
+                                    <li > <a href=""> 青海省</a></li>
+                                    <li > <a href=""> 宁夏回族自治区</a></li>
+                                    <li > <a href=""> 新疆维吾尔族自治区</a></li> -->
+                                </ul>
+                                </div>
+                                <div id="address-select-city"><ul>
+        
+                                    
+                                </ul></div>
+                                
+                        </div>
+                        </div>
+                    </div>
+                    <div id="header-list"><ul>
+                        <li id="more" class="iconfont"><a href="">更多&#xeb1f;</a>
+                        <div id="more-div">
+                            <div id="more-div-corp"><div class="more-div-title">合作专区</div>
+                            <div><span><a href="">联名卡申请</a></span><span><a href="">唯名卡</a></span></div></div>
+                            <div id="more-div-us"><div class="more-div-title" >关于我们</div>
+                            <div><span><a href="">Sell on vip</a></span><span><a href="">品牌招商</a></span><span><a href="">官方博客</a></span></div></div>
+                        </div>
+                    
+                    </li>
+                        <li id="mobile"> <a href="" class="iconfont">&#xe615;手机版</a>
+                        
+                        <div id="mobile-div">
+                            <div id="mobile-div-QRcode"><img src="img/1466134037230.jpg" alt=""></div>
+                            <div id="mobile-div-word"><a href="">随时逛 及时抢</a></div>
+                        </div></li>
+                        <li id="client"><a href="" class="iconfont">客户服务&#xeb1f;</a>
+                            <ul id="client-ul">
+                                    <li> <a href="">联系客服</a></li>
+                                    <li> <a href="">帮助中心</a></li>
+                                    <li> <a href="">服务中心</a></li>
+                                    <li> <a href="">知识产权投诉</a></li>
+                                </ul></li>
+                        <li id="club"> <a href="" class="iconfont">会员俱乐部&#xeb1f;</a>
+                            <ul id="club-ul">
+                                    <li><a href="">俱乐部首页</a></li>
+                                    <li> <a href="">唯品币兑换</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li id="sale"> <a href=""class="iconfont">我的特卖&#xeb1f;</a>
+                                <ul id="sale-ul">
+                                    <li><a href="">商品收藏</a></li>
+                                    <li><a href="">品牌收藏</a></li>
+                                    <li><a href="">我的足迹</a></li>
+                                </ul>
+                        
+                        </li>
+                        <li id="order"><a href="">我的订单</a></li>
+                        <li id="signup"><a href=""><img src="img/header_sign_hash_0459d02c.gif" alt="">签到有礼</a>
+                            <div id="signup-div">
+                                <div id="signup-div-circle"><span class="iconfont">&#xe758;</span><b>———</b>
+                                    <span class="iconfont">&#xe758;</span><b>———</b>
+                                    <span class="iconfont">&#xe758;</span><b>———</b>
+                                    <span class="iconfont">&#xe758;</span><b>———</b>
+                                    <span class="iconfont">&#xe758;</span><b>———</b>
+                                    <span class="iconfont">&#xe758;</span><b>———</b>
+                                    <span class="iconfont">&#xe758;</span>
+                            <div id="signup-div-days"><em>1天</em>
+                            <em>2天</em>
+                            <em>3天</em>
+                            <em>4天</em>
+                            <em>5天</em>
+                            <em>6天</em>
+                            <em>7天</em></div>
+                            </div>
+                                <div id="signup-div-button"><span>每天签到送惊喜，连续签到更享心动奖励</span> <button class="btn btn-danger">签到</button></div>
+        
+                            </div></li>
+                        <li id="register"> <a href="">注册</a></li>
+                        <li id="login"> <a href="">登陆</a> 
+                            <div id="login-div">
+                              <div id="login-div-piclog"><img src="img/my_cnt_pic.jpg" alt=""><span>您好！[<a href="">请登录</a>]</span></div>
+                              <div id="login-div-others">
+                                  <ul>
+                                  <li> <a href="">我的订单</a></li>
+                                  <li> <a href="">我的收藏</a></li>
+                                  <li> <a href="">我的优惠券</a></li>
+                                  <li> <a href="">零钱</a></li>
+                                  <li> <a href="">唯品金融</a></li>
+                                  <li> <a href="">我的唯品币</a></li>
+                              </ul></div>  
+                            </div>  </li>
+                   
+                    
+                    
+                    
+                   
+                    
+                    
+                </ul></div>
+                </div>
+            </div>
+            <div id="logo-background">
+                <div id="logo">
+                <div id="logo-logo"><img src="https://b.appsimg.com/upload/momin/2019/11/06/58/1573025578681.gif" alt=""></div>
+                <div id="logo-link"><a href="" id="logo-a1"></a>
+                <a href="" id="logo-a2"></a>
+                <a href="" id="logo-a3"></a><img src="https://b.appsimg.com/upload/momin/2019/06/24/19/1561344075509.png" alt=""></div>
+                <div id="logo-search">
+                    <form action="" id="logo-form">
+                        <input type="text" placeholder="唯品快抢" id="logo-input">
+                        <button id="logo-button" class="iconfont">&#xe63d;</button>
+                    </form>
+                    <div id="logo-extra"><ul>
+                        <li class="logo-extra-pink"><a href="">唯品快抢</a></li>
+                        <li class="logo-extra-pink"><a href="">大牌特卖</a></li>
+                        <li class="logo-extra-pink"> <a href="">三折封顶</a></li>
+                        <li><a href="">女式大衣</a></li>
+                        <li id="logo-extra-last-li"><a href="">女士羽绒服</a></li>
+                    </ul></div>
+                </div>
+                <div id="logo-cart" ><button class="iconfont">&#xe60c;购物车 <span id="logo-cart-span"><span id="logo-cart-num">0</span></span></button></div>
+            </div>
+            </div>
+            <div id="nav">
+                <ul id="nav-ul">
+                    <li id="nav-li-cate-name"><a href=""><img src="https://b.appsimg.com/upload/momin/2018/09/10/150/1536548648745.png" alt="">商品分类</a>
+                    <ul id="nav-ul-category-ul">
+                        <!-- <li><a href="">女装/男装/内衣</a></li>
+                        <li><a href="">女鞋/男鞋/箱包</a></li>
+                        <li><a href="">护肤彩妆/个护</a></li>
+                        <li><a href="">运动户外</a></li>
+                        <li><a href="">家电数码</a></li>
+                        <li><a href="">母婴童装</a></li>
+                        <li><a href="">手表配饰</a></li>
+                        <li><a href="">居家用品</a></li>
+                        <li><a href="">唯品生活</a></li>
+                        <li><a href="">唯品国际/唯品奢</a></li>
+                        <li><a href="">医药健康</a></li> -->
+                    </ul>
+                    <div id="nav-ul-category-container">
+                         <!-- <div class="nav-ul-category-list active">
+                            <dl class="nav-ul-category-title " ><div class="nav-dt"><dt>人气美衣&gt;</dt></div>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                            
+                            </dl>
+                        
+                            <dl class="nav-ul-category-title " ><div class="nav-dt"><dt>人气美衣&gt;</dt></div>
+                                <div class="nav-dd"><dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                            </div>
+                            </dl>
+                        </div> -->
+                        <!-- <div class="nav-ul-category-list">
+                            <dl class="nav-ul-category-title " ><dt>人衣&gt;</dt>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                            </dl>
+                            
+                            <dl class="nav-ul-category-title " ><dt>气美衣&gt;</dt>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                                <dd><a href="">羽绒服</a></dd>
+                            </dl>
+                            </div>
+                            <div class="nav-ul-category-list">
+                                <dl class="nav-ul-category-title " ><dt>美衣&gt;</dt>
+                                    <dd><a href="">羽绒服</a></dd>
+                                    <dd><a href="">羽绒服</a></dd>
+                                    <dd><a href="">羽绒服</a></dd>
+                                    <dd><a href="">羽绒服</a></dd>
+                                </dl>
+                                
+                                <dl class="nav-ul-category-title " ><dt>人美衣&gt;</dt>
+                                    <dd><a href="">羽绒服</a></dd>
+                                    <dd><a href="">羽绒服</a></dd>
+                                    <dd><a href="">羽绒服</a></dd>
+                                    <dd><a href="">羽绒服</a></dd>
+                                </dl>
+                                </div> -->
+                            
+                         
+                    </div>
+                    <div id="nav-ul-category-picture"></div>
+                    
+                    </li>
+        
+                    <li><a href=""><img src="img/1542896193724.gif" alt="">11.11来了</a></li>
+                    <li><a href="">最后疯抢</a></li>
+                    <li><a href="">唯品快抢</a></li>
+                    <li><a href="">女装</a></li>
+                    <li><a href="">母婴</a></li>
+                    <li><a href="">家电</a></li>
+                    <li><a href="">国际</a></li>
+                    <li><a href="">美妆</a></li>
+                    <li><a href="">鞋包</a></li>
+                    <li><a href="">男装</a></li>
+                    <li><a href="">预告</a></li>
+                    <li id="nav-more"><a href="" class="iconfont" >更多&#xeb1f;</a>
+                    
+                        <ul id="nav-more-ul">
+                            <li><a href="">运动</a></li>
+                            <li><a href="">家居</a></li>
+                            <li><a href="">生活</a></li>
+                            <li><a href="">配饰</a></li>
+                            <li><a href="">唯品·奢</a></li>
+                            <li><a href="">扶贫</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="product-background">
+                <div id="product">
+
+                    <div id="imageinfo">
+                        <div id="image">
+                            <div id="image-container"><img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0725/69/308ae1a2-2e86-46dd-a894-8263ed7553b5.jpg" alt=""></div>
+                            <ul id="image-small">
+                                <li><a href=""><img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0725/69/308ae1a2-2e86-46dd-a894-8263ed7553b5_64x64_90.jpg" alt=""></a></li>
+                                <li><a href=""><img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0704/115/f2834500-80e4-4e17-aecf-e3444829f6ed_64x64_90.jpg" alt=""></a></li>
+                                <li><a href=""><img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0702/19/9bfb3b84-915c-4c44-9d08-9cf1f01c1f74_64x64_90.jpg" alt=""></a></li>
+                                <li><a href=""><img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0715/182/4b00203a-7c9f-4fdf-afee-193a88a05452_64x64_90.jpg" alt=""></a></li>
+                                <li><a href=""><img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0702/185/163b253e-f6ab-41ce-8bfe-2994d3d2975f_64x64_90.jpg" alt=""></a></li>
+                                <li><a href=""><img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0702/60/f9323d28-80d6-4106-a290-015ea35c2597_64x64_90.jpg" alt=""></a></li>
+                            </ul>
+                            <div id="image-info"><span>商品编码：AV0110HE</span><a href=""><b class="iconfont">&#xe70b;</b>收藏商品</a><button class="iconfont">分享到:&#xeb1f;</button></div>
+                        </div>
+                        <div id="info">
+                            <div id="info-brand"><a href="">法贝妃</a></div>
+                            <div id="info-name">2019秋冬新品时尚牛皮黑色高跟鞋女鞋尖头细跟职业女鞋单鞋</div>
+                            <div id="info-des">职场女性必备的百搭安全色系鞋款，不同的鞋跟高度展示不一样的女人风情，欧美风，精选牛皮 时尚格子石头纹</div>
+                            <div id="info-price"><span id="info-newprice">¥<span>398</span></span><span id="info-oldprice">¥1413</span> <span id="info-discount">2.8折</span></div>
+                            <div id="info-deliver">
+                                <div>配送</div>
+                                <div id="info-position">
+                                   <div id="info-address" class="iconfont"> <a href="">山东省&nbsp;东营市&nbsp;市北区&#xeb1f;</a></div>
+                                    <div>现在付款，预计11月23日（周六）送达</div>
+                                </div></div>
+                            <div id="info-cost"><span>运费</span> <span id="info-mem">新会员专享首单满38元免邮（限唯品自营商品，部分商品不可用）</span></div>
+                            <div id="info-color"><div>颜色</div><div id="info-color-select"><button>白色高跟版9.5cm</button><button>白色低跟版8cm</button><button>黑色高跟版9.5cm</button><button>黑色低跟版8cm</button></div></div>
+                            <div id="info-size"><div>尺码</div><div id="info-size-select"><button>34</button><button>35</button><button>36</button><button>37</button><button>38</button><button>39</button></div></div>
+                            <div id="info-num"><div>数量</div><div id="info-num-number"><button>-</button><span>0</span><button>+</button></div></div>
+                            <div id="info-buy"><button>加入购物袋</button>
+                                <div>购买最多可获<span>159</span>个唯品币</div>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+
+            <div id="content-background">
+                <div id="content">
+                    <ul id="content-menu">
+                        <li><a href="">尺码参数</a></li>
+                        <li><a href="">商品展示</a></li>
+                        <li><a href="">全部口碑</a></li>
+                        <li><a href="">商品咨询</a></li>
+                          <li><a href="">关于我们</a></li>
+                    </ul>
+
+                    <div id="content-size">
+                        <div class="content-size-name"><span class="content-size-name-title">商品尺码</span><span>SIZE</span></div>
+                        <div id="content-table">
+                            <div><span>尺码对照表：</span></div>
+                            <ul id="content-sizetable">
+                                <li><dl>
+                                    <dt>尺码</dt>
+                                    <dd>34</dd>
+                                    <dd>35</dd>
+                                    <dd>36</dd>
+                                    <dd class="content-sizetable-hidden">37</dd>
+                                    <dd class="content-sizetable-hidden">38</dd>
+                                    <dd class="content-sizetable-hidden">39</dd>
+                                </dl></li>
+                                <li><dl>
+                                        <dt>鞋码</dt>
+                                    <dd>34</dd>
+                                    <dd>35</dd>
+                                    <dd>36</dd>
+                                    <dd class="content-sizetable-hidden">37</dd>
+                                    <dd class="content-sizetable-hidden">38</dd>
+                                    <dd class="content-sizetable-hidden">39</dd>
+                                    </dl></li>
+                                    <li><dl>
+                                            <dt>欧洲码</dt>
+                                            <dd>34</dd>
+                                            <dd>35</dd>
+                                            <dd>36</dd>
+                                            <dd class="content-sizetable-hidden">37</dd>
+                                            <dd class="content-sizetable-hidden">38</dd>
+                                            <dd class="content-sizetable-hidden">39</dd>
+                                        </dl></li>
+                                        <li><dl>
+                                                <dt>脚长（mm）</dt>
+                                                <dd>220mm</dd>
+                                                <dd>225mm</dd>
+                                                <dd>230mm</dd>
+                                                <dd class="content-sizetable-hidden">235mm</dd>
+                                                <dd class="content-sizetable-hidden">240mm</dd>
+                                                <dd class="content-sizetable-hidden">245mm</dd>
+                                            </dl></li>
+                            </ul>
+                            <div id="content-table-more"><a href="" class="iconfont">更多&#xeb1f;</a></div>
+                        </div>
+                    </div>
+                    <div id="content-image">
+                            <div class="content-size-name"><span class="content-size-name-title">图片展示</span><span>SHOW</span></div>
+                        <img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0730/48/808cd416-2c98-4c00-977c-eb4e086ebe43.jpg" alt="">
+                        <img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0702/196/3e44d618-9418-48ce-956c-2cf1bfbec822.jpg" alt="">
+                        <img src="https://a.vpimg4.com/upload/merchandise/pdcvis/610389/2019/0702/115/cf43a080-f4cd-4184-a6e1-e3f71d478855.jpg" alt="">
+                    </div>
+
+                    <div id="content-comment">
+                            <div class="content-size-name"><span class="content-size-name-title">售后说明</span><span>COMMENT</span></div>
+                            <div id="comment-requtation">全部口碑</div>
+                            <div id="comment-view">
+                                <div ><span id="comment-score">98.31%</span><span>的用户对商品满意</span></div>
+                                <div>
+                                    <button>好评</button>
+                                    <button>时尚</button>
+                                    <button>质量好</button>
+                                    <button>合适</button>
+                                    <button>待改进</button>
+                                    
+                                </div>
+                            </div>
+                            <div id="comment-list">
+                                <ul>
+                                    <li><div class="comment-info">
+                                            <div class="comment-info-image"><img src="https://h2.appsimg.com/b.appsimg.com/upload/mcp/2017/09/21/195/150598438091.png" alt=""></div>
+                                            <div class="comment-info-id"><i>137*****865</i>
+                                            <i><img src="" alt="">白金卡会员</i>
+                                        </div>
+                                        </div>
+                                        <div class="comment-info-comment">
+
+                                            <div class="comment-info-comment-key"><span>时尚</span><span>防滑</span></div>
+                                            <div class="comment-info-comment-word">跟真的高，但喜欢这种款就留下了，质量也好，不会有异响。唯一不好就做工有点糙，刚拿回来就穿楼下逛超市了，脚磨泡了，回到家把鞋子里面都修理了下，还擦了润肤霜在磨擦的地方，后面再穿就好很多了，但不能走太长的路，不然还是会不舒适的。</div>
+                                            <div class="comment-info-comment-type"> <span>颜色：黑色高跟版9.5com</span><span>尺码：38</span></div>
+                                            <div class="comment-info-comment-date">2019-10-14 10:22:45</div>
+                                        </div>
+                                    </li>
+                                    <li><div class="comment-info">
+                                            <div class="comment-info-image"><img src="https://h2.appsimg.com/upic.vimage1.com/upload/xupload/2019/05/31/108/xup_5166191472.png?status=1" alt=""></div>
+                                            <div class="comment-info-id"><i>Judy</i>
+                                            <i><img src="" alt="">金卡会员</i>
+                                        </div>
+                                        </div>
+                                        <div class="comment-info-comment">
+
+                                            <div class="comment-info-comment-key"><span>时尚</span><span>增高</span></div>
+                                            <div class="comment-info-comment-word">第一次购买这个品牌！感觉还不错！现在就等着上脚的感觉了！</div>
+                                            <div class="comment-info-comment-type"> <span>颜色：黑色高跟版9.5com</span><span>尺码：35</span></div>
+                                            <div class="comment-info-comment-date">2019-11-15 17:25:29</div>
+                                        </div>
+                                    </li>
+                                    <li><div class="comment-info">
+                                            <div class="comment-info-image"><img src="https://h2.appsimg.com/b.appsimg.com/upload/mcp/2017/09/21/41/150598456087.png" alt=""></div>
+                                            <div class="comment-info-id"><i>VIPSHOP会员</i>
+                                            <i><img src="" alt="">白金卡会员</i>
+                                        </div>
+                                        </div>
+                                        <div class="comment-info-comment">
+
+                                            <div class="comment-info-comment-key"><span>时尚</span></div>
+                                            <div class="comment-info-comment-word">我都买了很多双这个牌子的鞋子了，跟高但是不累脚，穿上非常舒服</div>
+                                            <div class="comment-info-comment-type"> <span>颜色：黑色高跟版9.5com</span><span>尺码：38</span></div>
+                                            <div class="comment-info-comment-date">2019-11-12 10:55:39</div>
+                                        </div>
+                                    </li>
+                                    <li><div class="comment-info">
+                                            <div class="comment-info-image"><img src="https://h2.appsimg.com/upic.vimage1.com/2016/10/31/6484/f0aa59fef3a6f4e59aad239bcd1678d6.png" alt=""></div>
+                                            <div class="comment-info-id"><i>158*****797</i>
+                                            <i><img src="" alt="">金卡会员</i>
+                                        </div>
+                                        </div>
+                                        <div class="comment-info-comment">
+
+                                            <div class="comment-info-comment-key"><span>时尚</span></div>
+                                            <div class="comment-info-comment-word">喜欢，质量好！穿上不累脚！以后继续关注</div>
+                                            <div class="comment-info-comment-type"> <span>颜色：黑色低跟版8cm</span><span>尺码：34</span></div>
+                                            <div class="comment-info-comment-date">2019-10-14 17:45:31</div>
+                                        </div>
+                                    </li>
+                                    <li><div class="comment-info">
+                                            <div class="comment-info-image"><img src="https://h2.appsimg.com/upic.vimage1.com/upload/xupload/2019/09/16/66/xup_0532802325.png?status=1" alt=""></div>
+                                            <div class="comment-info-id"><i>美莹莹</i>
+                                            <i><img src="" alt="">  金卡会员</i>
+                                        </div>
+                                        </div>
+                                        <div class="comment-info-comment">
+
+                                            <div class="comment-info-comment-key"><span>好看</span><span>质量好</span></div>
+                                            <div class="comment-info-comment-word">鞋子很好看，就是有点大了，垫个半垫会好些。唯品会的东西质量都很好👍</div>
+                                            <div class="comment-info-comment-type"> <span>颜色：黑色低跟版8cm</span><span>尺码：39</span></div>
+                                            <div class="comment-info-comment-date">2019-10-10 15:24:17</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    <div id="content-consult">
+                        <div id="content-consult-service">购买前如有问题，请向唯品会咨询。<button>联系客服</button></div>
+                        <div>
+                            <div class="content-consult-Q">商品都是正品吗？</div>
+                            <div class="content-consult-A">请你放心，唯品会www.vip.com上所售卖的商品均确保正品，并由中国人民财产保险股份有限公司为你购买的每一件商品进行承保。</div>
+                            <div class="content-consult-Q">衣服图片上搭配的腰带、项链等配件，会连商品一同送货吗？</div>
+                            <div class="content-consult-A">这点请注意咯，如非特别说明，服装类商品图片中的腰带、饰品等配件均为拍摄搭配之用，是不包含在所售商品中的。</div>
+                            <div class="content-consult-Q">尺码表上的尺码标准吗？</div>
+                            <div class="content-consult-A">唯品会所售商品尺寸均为人工测量，可能会存在1-2cm的正常误差范围。</div>
+                            <div class="content-consult-Q">图片颜色和实物颜色是否相同？</div>
+                            <div class="content-consult-A">唯品会所有商品均采用专业拍摄，力求将最真实的信息传达至你的视线。但由于个人显示器不同，可能导致实物与图片存在色差，最终颜色以实物为准。</div>
+                            <div class="content-consult-Q">为什么我收到的商品包装和图片显示的不一致？</div>
+                            <div class="content-consult-A">由于部分商品生产批次不一，你收到货品的包装有可能与网站上图片不完全一致，但唯品会保证所售商品均为正品，商品包装请以实物为准。</div>
+                            <div class="content-consult-Q">唯品会的对比价格：</div>
+                            <div class="content-consult-A">唯品会展示的中间未划横线价格（显示如¥799）为唯品会销售价，该价格是交易成交价，是您最终决定是否购买商品的依据。
+                                    唯品会展示的中间划横线价格（显示如 ¥2899）为参考价，采集自品牌专柜标价、商品吊牌价、品牌官网价格或由供应商提供的正品零售价；由于地区、时间、货币汇率等的差异及存在品牌方调价、市场行情波动、产品批次等因素，品牌专柜标价、商品吊牌价等可能会与您购物时网页显示的划线价不一致。该价格仅供您参考。
+                                    折扣比为唯品会销售价与参考价的对比（该值四舍五入后采小数点后1位，如¥799/¥2899=0.2756=2.8折），该对比值仅供您参考，不作为结算基数。</div>
+                            <div class="content-consult-Q">如何退货？</div>
+                            <div class="content-consult-A">在你签收商品之日起的7天之内，唯品会为你提供七天无理由放心退服务，但以下情形将不能退货：1、非唯品会销售的商品，或有明显使用痕迹影响二次销售的商品；2、法律明确规定不适用七天无理由退货的商品；3、基于安全及健康的考虑，已拆封的食品、药品、保健品、化妆品、贴身用品等；4、已经激活的手机、电脑、数码产品等；5、已在线交付的充值类商品；6、未经授权的维修、误用、碰撞、疏忽、滥用、进液、事故、改动、不正确的安装所造成的商品质量问题，或撕毁、涂改标贴、机器序号、防伪标记；7、无法提供商品的发票（如已索要发票）、保修卡等三包凭证或者三包凭证信息与商品不符及被涂改的；8、礼包或套装中的商品不可以部分退换货。详见唯品会退货政策。上述退货规则，客户一经购买，视为认可。</div>
+                        </div>
+                    </div>
+                    <div id="content-us">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div id="right-menu">
+                    <div id="side-bar"> 
+                        <div class="iconfont" id="big-move"> 
+                            
+                            <div id="side-bar-login" class="side-move">
+                                
+                                <img src="img/my_cnt_pic.jpg" alt=""><span>您好！[<a href="">请登录</a>|<a href="">注册</a> ]</span>
+                                
+                                <div id="side-move-info">
+                                <a href=""><i class="iconfont">&#xe86b;</i><i>我的订单</i></a>
+                                <a href=""><i class="iconfont">&#xe617;</i><i>我的消息</i></a>
+                                </div>
+                            
+                            <div id="side-move-club"><a href="">会员俱乐部</a>
+                            
+                            </div>
+                            </div>
+                            
+                         <a href="" class="side-move-icon">&#xe655;<span>账号</span></a></div>
+                    
+                   
+                        <div class="iconfont menu-bag"><div class="side-move"></div> <a href=""class="side-move-icon" ><span id="shopping-bag">购物袋<span id="shopping-bag-num">0</span></span></a></div>
+                    
+                   
+                        <div class="iconfont"><div class="side-move"><a href="">我的优惠券</a></div> <a href="" class="side-move-icon">&#xe60b;</a></div>
+                    
+                   
+                        <div class="iconfont"><div class="side-move"><a href="">品牌收藏</a></div> <a href="" class="side-move-icon">&#xe658;</a></div>
+                    
+                   
+                        <div class="iconfont"><div class="side-move"><a href="">商品收藏</a> </div> <a href="" class="side-move-icon">&#xe630;</a></div>
+                    
+                   
+                        <div class="iconfont"><div class="side-move"><a href="">我的足迹</a></div> <a href="" class="side-move-icon">&#xe60d;</a></div>
+                    
+                    </div>
+                    <div id="side-bottom-bar">   
+                    <div class="iconfont "><div class="side-move"><a href="">会员反馈</a></div> <a href="" class="side-move-icon">&#xe678;</a></div>
+                    
+                   
+                        <div class="iconfont "><div class="side-move"><a href="">返回顶部</a></div> <a href="" class="side-move-icon">&#xe652;</a></div>
+                    </div> 
+                   
+                </div>
+</body>
+</html>

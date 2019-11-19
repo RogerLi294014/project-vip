@@ -98,6 +98,8 @@
             #header #header-nav #header-list #more #more-div span a {
               text-decoration: none;
               color: black; }
+            #header #header-nav #header-list #more #more-div span a:hover {
+              color: deeppink; }
           #header #header-nav #header-list #more #more-div #more-div-us, #header #header-nav #header-list #more #more-div #more-div-corp {
             width: 280px;
             margin: 0 10px; }
@@ -244,6 +246,8 @@
         #header #header-nav #header-list ul li a {
           color: black;
           text-decoration: none; }
+        #header #header-nav #header-list ul li a:hover {
+          color: deeppink; }
         #header #header-nav #header-list ul li #login-div {
           height: 177px;
           width: 282px;
@@ -361,6 +365,8 @@
           #logo-background #logo #logo-search #logo-extra ul li a {
             text-decoration: none;
             color: black; }
+          #logo-background #logo #logo-search #logo-extra ul li a:hover {
+            color: deeppink; }
         #logo-background #logo #logo-search #logo-extra .logo-extra-pink a {
           color: deeppink; }
         #logo-background #logo #logo-search #logo-extra #logo-extra-last-li {
@@ -389,18 +395,20 @@
 
 #nav {
   height: 43px;
-  background-color: blueviolet;
+  background-color: #f5f5f5;
   z-index: 50; }
   #nav #nav-ul {
     height: 43px;
     width: 1000px;
     margin: 0 auto;
     position: relative;
-    background: burlywood;
-    border: 1px solid burlywood; }
+    background: #f5f5f5;
+    border: 1px solid #f5f5f5; }
     #nav #nav-ul #nav-li-cate-name {
       width: 160px;
       background-color: deeppink; }
+      #nav #nav-ul #nav-li-cate-name a:hover {
+        color: white; }
     #nav #nav-ul li {
       float: left;
       list-style: none;
@@ -415,6 +423,8 @@
         display: block;
         white-space: nowrap;
         padding: 0 12px; }
+      #nav #nav-ul li a:hover {
+        color: deeppink; }
     #nav #nav-ul #nav-ul-category-ul {
       display: none;
       position: absolute;
@@ -427,6 +437,8 @@
       #nav #nav-ul #nav-ul-category-ul li {
         float: none;
         text-align: left; }
+      #nav #nav-ul #nav-ul-category-ul a:hover {
+        color: deeppink; }
     #nav #nav-ul #nav-ul-category-container {
       display: none;
       position: absolute;
@@ -439,6 +451,8 @@
       box-shadow: gray;
       overflow: auto;
       height: 495px; }
+      #nav #nav-ul #nav-ul-category-container a:hover {
+        color: deeppink; }
       #nav #nav-ul #nav-ul-category-container .nav-ul-category-list {
         display: none;
         overflow: auto; }
@@ -604,11 +618,11 @@
 #footer {
   height: auto;
   width: 100%;
-  background: black; }
+  background: #f5f5f5; }
   #footer #footer-content {
     width: 1100px;
     height: auto;
-    background-color: aqua;
+    background-color: #f5f5f5;
     margin: 0 auto; }
     #footer #footer-content #footer-image {
       width: 100%; }

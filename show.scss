@@ -1,8 +1,7 @@
-    *{
-    margin:0;
+*{
+    margin: 0;
     padding: 0;
 }
-//header头部
 #header{
    
     height: 30px;
@@ -570,7 +569,7 @@
         margin: 0 auto;
         position: relative;
         background: #f5f5f5;
-        border: 1px solid #f5f5f5  ;
+        border: 1px solid #f5f5f5    ;
         #nav-li-cate-name{
             width: 160px;
             background-color: deeppink;
@@ -613,10 +612,11 @@
                 li{
                     float: none;
                     text-align: left;
+                    a:hover{
+                        color: deeppink;
+                    }
                 }
-                a:hover{
-                    color: deeppink;
-                }
+                
 
                 
             }
@@ -706,214 +706,521 @@
         
 }
 
-#banner{
-    height: 400px;
-    position: relative;
-    background-color: white;
+
+
+#product-background{
+
     width: 100%;
-    overflow: hidden; 
-        li{
-            width: 1920px;
-            overflow: hidden;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top:0;
-            margin: 0 auto;
-            
-            
-            a{
-                position: absolute;
-                left: 50%;
-                top: -5%;
-                img{
-                    
-                   position: relative;
-                   left: -65%;
-                   
-                   
-                }
-            }
-        }
-        
-
-    #banner-circle{
-        position: absolute;
-        bottom: 10px;
-        left: 45%;
-        z-index: 102;
-
-        a{  display: block;
-            height: 10px;
-            width: 10px;
-            border-radius: 50%;
-            margin:0 10px;
-            display: block;
-            float: left;
-            background-color: white;
-        }
-        
-        
-        .banner-circle-active{
-            background-color: deeppink;
-        }
-    }
-    
-}
-
-#goods{
-    width: 100%;
+    height: 600px;
     position: relative;
     background: white;
+
+}
+#product{
+    width: 1000px;
     height: auto;
-    span{
-        margin: 0 5px;
-    }
-    
-    .collection{
-        display: none;
-        opacity: 0.3;
-        width: 90px;
-        color: deeppink;
-        background: white;
-        position: absolute;
-        right: 0;
-        bottom: 50px;
-        border-radius: 45px;
-        a{
-            color: deeppink;
-            margin-left: 4px;
-        }
-        span{
-            color: black;
-            margin-left: 10px;
-            font-size: 12px;
-        }
-    }
-    .goods-title{
-        font-size: 18px;
-        font-weight: 900;
-        width: 480px;
-        display: block;
-        
-    
-}
-.discount-color{
-    font-weight: 700;
-    color: deeppink;
-    font-size: 16px;
-}
-#goods-range{
-    width: 1100px;
     position: relative;
     background: white;
     margin: 0 auto;
-    ul{
-        margin: 0 auto;
-        width: 1050px;
-    }
-     li{
-        background-color: white;
-        list-style: none;
-        display: inline-block;
-        position: relative;
-        margin:0 10px;
-        width: 490px;
-        margin-top: 20px;
-        
-        background: #fff;
-        div{
-            margin-left: 10px;
-        }
-    }
-    a{
-        text-decoration: none;
-        color: black;
-    }
-    .deals-countdown{
-        position: absolute;
-        top: 5px; 
-        left: 269px;
-        span{
-            margin: 0 9.5px;
-            color: white;
-        }
-    }
 
-    .goods-type{
-        margin-top: 20px;
-    }
-    
-
-}
-.goods-link{
-    height: 43px;
-    float: right;
-    
-    position: relative;
-    a{
-        color: black;
-        display: block;
-       float: right;
-        opacity: 1;
-       
-        
-    
-    
-    };
-}
-.data-img{
-    height: 235px;
-    width: 490px;
-}
-
-.img-frame{
-    width: 1030px;
-    border-bottom: 1px solid black;
-}
-
-
-}
-#footer{
-    height: auto;
-    width: 100%;
-    background: #f5f5f5;
-
-    #footer-content{
-        width: 1100px;
+    #imageinfo{
+        width: 100%;
         height: auto;
-        background-color: #f5f5f5;
-        margin: 0 auto;
+        background: white;
+        position: relative;
+        overflow: hidden;
+        #image{
+            width: 420px;
+            height: auto;
+            background: white;
+            float: left;
+            #image-container{
+                width: 420px;
+                height: 420px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 
-        #footer-image{
+            
+        }
+        #image-small{
             width: 100%;
-            img{
-                width: 100%;
-                display: block;
-                margin:0 auto
+            height: 64px;
+            
+            li{
+                float: left;
+                list-style: none;
+                margin: 5px 3px 0;
+            }
+        }
+        #image-info{
+            height: auto;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            a:hover{
+                color: deeppink;
+            }
+            button{
+                float: right;
+                margin-right: 5px;
+                background: white;
+                border: 1px solid silver;
+            }
+            span{
+                margin: 0 5px;
             }
         }
 
-        #footer-list{
-            dl{width: 14%;
-                display: block;
-                float: left;
-                text-align: left;
-                margin: 30px  10px  0;
-                border-right: 1px solid silver;
-                dd{
+        #info{
+            width: 500px;
+            height: auto;
+            float: left;
+
+            div{
+                margin-left: 5px;
+                width: 100%;
+            }
+            #info-brand{
+                margin: 5px 0;
+                margin-left: 5px;
+                a{
+                    text-decoration: none;
+                   font-size: 18px; 
+                }
+                a:hover{
+                    color: deeppink;
+                }
+            }
+            #info-name{
+                
+                font-size: 16px;
+                font-weight: 600;
+            }
+            #info-des{
+                
+                font-size: 12px;
+                color: gray;
+            }
+            #info-price{
+                height: 90px;
+                background: #faf5f8;
+                span{
+                    line-height: 90px;
+                }
+           #info-newprice{
+               color: deeppink;
+               span{
+                   font-size: 40px;
+               }
+           }
+           #info-oldprice{
+               text-decoration: line-through;
+               color: gray;
+               font-size: 16px;
+               margin-left: 10px;
+           }
+           #info-discount{
+               font-size: 16px;
+               margin-left: 10px;
+               color: gray;
+           }
+
+           
+            }
+            #info-deliver{
+                overflow: hidden;
+                height: 40px;
+                margin-top: 10px;
+                div{
+                    float: left;
+                    width: auto;
                     font-size: 12px;
-                    a{
-                        list-style: square;
-                        color: gray;
+                
+                   
+ 
+                }
+                #info-position{
+                    div{
+                        float: none;
+                        display: block;
+                    }
+                    #info-address{
+                       
+                        a{
+                            text-decoration: none;
+                            background: white;
+                            border: 1px solid silver;
+                            width: auto;
+                            display: inline-block;
+                        }
+                    }
+                  
+                }
+            }
+            #info-cost{
+                float: none;
+                margin: 10px;
+                span{
+                    font-size: 12px;
+                }
+               #info-mem{
+                   margin-left: 5px;
+               }
+            }
+            #info-color{
+              height: 80px;
+              div{
+                  float: left;
+                  width: auto;
+              }  
+              #info-color-select{
+                 height: 80px;
+                button{
+                  font-size: 12px;
+                  background: white;
+                  border: 1px solid deeppink;
+                  padding: 5px 5px;
+                  margin: 0 5px;
+              }
+            }
+            }
+            #info-size{
+                height: 80px;
+              div{
+                  float: left;
+                  width: auto;
+              }  
+              #info-size-select{
+                 height: 80px;
+                button{
+                  font-size: 12px;
+                  background: white;
+                  border: 1px solid deeppink;
+                  padding: 5px 5px;
+                  margin: 0 10px;
+                  width: 50px;
+              }
+            }
+                
+            }
+            #info-num{
+                height: 50px;
+                overflow: hidden;
+                div{
+                    float: left;
+                    width: auto;
+                }
+                #info-num-number{
+                    width: auto;
+                   
+                    background: white;
+                    border: 1px solid silver;
+                    button{
+                        width: 30px;
+                        background: silver;
+                        border: 1px solid deeppink;
+                    }
+                    span{
+                        display: inline-block;
+                        width: auto;
+                        padding: 0 10px;
+                    }
+                }
+            }
+            #info-buy{
+                width: 100%;
+                button{
+                    width: 200px;
+                    height: 50px;
+                    background: deeppink;
+                    color: white;
+                    border: 1px solid deeppink;
+                    border-radius: 5px;
+                    margin-left: 20px;
+                    font-size: 20px;
+                }
+                div{
+                    margin: 5px;
+                    margin-left: 25px;
+                    color: gray;
+                    span{
+                        color: deeppink;
+                        padding: 0 2px;
                     }
                 }
             }
         }
-       
     }
 }
+
+
+
+#content-background{
+    width: 100%;
+    height: auto;
+    background: black;
+
+
+
+    #content{
+        width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        background: aqua;
+        #content-menu{
+            height: 36px;
+            border: 1px solid silver;
+            border-bottom: 3px solid black;
+            li{
+                float: left;
+                border: 1px solid silver;
+                border-bottom: 3px solid  deeppink;
+                border-top: none;
+               
+                border-left: none;
+                list-style: none;
+                width: 10%;
+                height: 35px;
+                text-align: center;
+                line-height: 33px;
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+                a:hover{
+                    color: deeppink;
+                    
+                }
+            }
+        }
+        .content-size-name{
+            width: 100%;
+            height: 30px;
+            margin-bottom: 10px;
+            border-bottom: 3px dotted silver;
+            .content-size-name-title{
+                color: deeppink;
+                font-size: 20px;
+                margin-left: 20px;
+            }
+            span{
+                color: silver;
+                margin: 5px;
+            }
+        }
+        #content-size{
+            
+
+            #content-sizetable{
+                height: auto;
+                width: 90%;
+                overflow: hidden;
+                margin: 0 auto;
+                
+                border-collapse: collapse;
+                li{
+                    float: left;
+                    width: 25%;
+                    height: 100%;
+                    list-style: none;
+                    text-align: center;
+                    
+                    dl{
+                        height: 100%;
+                        dt{width: 100%;
+                            height: auto;
+                            padding: 10px 0;
+                            background: silver;
+                            border: 1px solid gray;
+                            
+                        }
+                        dd{
+                            width: 100%;
+                            height: auto;
+                            padding: 10px 0;
+                            border: 1px solid gray;
+                            border-collapse: collapse;
+                        }
+                    }
+                }
+                .content-sizetable-hidden{
+                    display: none;
+                }
+            }
+
+            #content-table-more{
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        #content-image{
+            img{
+                display: block;
+                margin:0 auto;
+            }
+        }
+
+        #content-comment{
+            #comment-requtation{
+                width: 100%;
+                height: 40px;
+                background: silver;
+                text-align: left;
+                line-height: 40px;
+                padding-left: 20px;
+            }
+            #comment-view{
+                width: 100%;
+                height: auto;
+                border: 1px dotted silver;
+                overflow: hidden;
+                div{
+                    float: left;
+                    height: 100px;
+                    width: 50%;
+                    font-size: 12px;
+                    padding: 15px;
+                    button{
+                        width: 80px;
+                        height: 20px;
+                        background: #ededed;
+                        border: 1px solid pink;
+                    }
+                   
+                }
+                #comment-score{
+                    color: deeppink;
+                    font-size: 30px;
+                }
+
+            }
+            #comment-list{
+                width: 100%;
+                height: auto;
+                ul{
+                    width: 100%;
+                    height: auto;
+                    background: white;
+
+                    li{
+                        width: 100%;
+                        height: auto;
+                        border-bottom: 1px dotted silver;
+                        overflow: hidden;
+                        div{
+                            float: left;    
+                        }
+                        .comment-info{
+                            width: 30%;
+                            height: 100%;
+                           
+                            overflow: hidden;
+                            padding: 10px;
+                            div{
+                                float: left;
+                            }
+                            .comment-info-image{
+                                height: 40px;
+                                width: 40px;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                }
+                            }
+                            .comment-info-id{
+                                padding-left: 20px;
+                                i{
+                                    display: block;
+                                }
+                            }
+                        }
+                        .comment-info-comment{
+                            width: 70%;
+                            height: 100%;
+                            div{
+                                display: block;
+                                width: 100%;
+                                font-size: 12px;
+                            }
+                            .comment-info-comment-key{
+                                width: 100%;
+                                span{
+                                    display: inline-block;
+                                    width: 60px;
+                                    height: 25px;
+                                    margin: 20px;
+                                    margin-left: 0px;
+                                    line-height: 25px;
+                                    border: 1px solid silver;
+                                    background: #ededed;
+                                    text-align: center;
+                                }
+                            }
+                            .comment-info-comment-type{
+                                padding: 10px 0;
+                                span{
+                                    color: gray;
+                                    margin-right:20px;
+                                }
+                            }
+                            .comment-info-comment-date{
+                                color: gray;
+                                padding: 10px 0;
+                               
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        #content-consult{
+            width:100%;
+            height:auto;
+            background: pink;
+            div{
+                display: block;
+                width:100%;
+            }
+            #content-consult-service{
+                width: 100%;
+                button{
+                    width: 100px;
+                    height: 30px;
+                    background: pink;
+                    border: 1px solid deeppink;
+                    font-size: 16px;
+                    line-height: 30px;
+                    font-weight: 600;
+                    margin: 0 5px;
+                    color: deeppink;
+                }
+            }
+            .content-consult-Q{
+                font-weight: 600;
+                margin: 5px 0;
+                margin-left: 20px;
+            }
+            .content-consult-A{
+                margin-bottom: 30px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+
+
 
 #right-menu{
     width: 50px;

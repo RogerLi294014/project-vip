@@ -45,13 +45,23 @@ gulp.task("sass1",function(){
     .pipe(sass())
     .pipe(gulp.dest("disc/css"))
 })
+
+gulp.task("scss1",function(){
+    return gulp.src("show.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("disc/css"))
+    .pipe(minifycss())
+    .pipe(rename("show-min.css"))
+    .pipe(gulp.dest("disc/css"))
+    .pipe(connect.reload())
+})
 gulp.task("data",function(){
     return gulp.src(["*.json","!package.json"])
     .pipe(gulp.dest("disc/data"))
     .pipe(connect.reload())
 })
 
-gulp.task("combine",["copy","image","script","sass","sass1","scss","data"],function(){
+gulp.task("combine",["copy","image","script","sass","sass1","scss","data","scss1"],function(){
     console.log("Best Match!")
 })
 
@@ -63,6 +73,7 @@ gulp.task("watch",function(){
     gulp.watch(["*.json","!package.json"],["data"])
     gulp.watch("*.css",["sass1"])
     gulp.watch("product.scss",["scss"])
+    gulp.watch("show.scss",["scss1"])
     
 })
 gulp.task("server", function(){
