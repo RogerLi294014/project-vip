@@ -19,6 +19,7 @@ require.config({
 
 require(["select-city","index","category","nav","rightmenu","goodsAnime","image","addcart"],function(selectCity,index,category,nav,rightmenu,goodsAnime,image,addcart){
     nav.ajax();
+    nav.showdata();
     image.imagemove()
    selectCity.buttonSwitch();
    selectCity.ajax();
@@ -35,5 +36,6 @@ require(["select-city","index","category","nav","rightmenu","goodsAnime","image"
    image.menutop();
    image.hiddensize();
    addcart.addcart();
+
    
 })

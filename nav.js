@@ -50,10 +50,61 @@ define(["jquery"],function($){
 
     }
 
-    
+    function showdata(){
+
+        $.ajax({
+            type:"get",
+            url:"../data/highwheel.json",
+            success:function(obj){
+                var arr= obj.highwheel
+                console.log(arr)
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].id == getUrlParam("id")){
+                        image=arr[i].img
+                        color=arr[i].color
+                        discount=arr[i].discount
+                        oldprice=arr[i].oldprice
+                        if(arr[i].price==""){
+                            specialprice=arr[i].specialprice
+                        }else{
+                            specialprice=arr[i].price
+                        }
+                        title=arr[i].title
+                        size=arr[i].size
+
+                        console.log(image)
+                        console.log(color)
+                        console.log(discount)
+                        console.log(specialprice)
+                        console.log(title)
+                        console.log(oldprice)
+                        console.log(size)
+                        for(var j=0;j<color.length;j++){
+                            var colornode=$(` <button>${color[j]}</button>`)
+                            colornode.appendTo("#info-color-select")
+                        }
+                        
+
+                    }
+                }
+
+            },
+            error:function(msg){
+                console.log(msg)
+            }
+
+        })
+    }
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
 
     return{
-        ajax:ajax
+        ajax:ajax,
+        showdata:showdata
        
     }
 })
