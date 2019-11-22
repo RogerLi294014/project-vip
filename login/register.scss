@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header-background{
+    width: 100%;
+    height: 100px;
+    background: white;
+    #header{
+        width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+        background: white;
+        div{
+            float: left;
+        }
+        #header-logo{
+            width: 300px;
+            height: 100%;
+            padding-top: 10px;
+            
+            a{
+                display: block;
+                width: 135px;
+                height: 90px;
+                line-height: 100px;
+                position: relative;
+                overflow: hidden;
+                img{
+                   left:-300px;
+                   top: -65px;
+                    position: absolute;
+                }
+            }
+        }
+        #header-other{
+            width: auto;
+            height: 100%;
+            float: right;
+            div{
+                width: 304px;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+#register-background{
+    width: 100%;
+    height: 650px;
+    background: url("https://a.vpimg2.com/upload/flow/2019/01/29/88/15487540172274.jpg") no-repeat center top;
+    overflow: hidden;
+    #register{
+        width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+       #register-form{
+           width: 360px;
+           float: right;
+           height: auto;
+           background: white;
+           border-radius: 5px;
+           margin-top: 50px;
+           #form-background{
+               margin: 0 auto;
+               width: 100%;
+               height: auto;
+               background: white;
+               border-radius: 5px;
+
+               #form-login{
+                   width: 100%;
+                   height: 50px;
+                   overflow: hidden;
+                   border-bottom: 1px solid silver;
+                   #form-login-block{
+                       width: 100%;
+                       height: 100%;
+                       margin: 0 auto;
+                       overflow: hidden;
+                      
+                       div{
+                        float: left;
+                        height: 100%;
+                        line-height: 50px;
+                        text-align:center;   
+                    }
+                    #form-login-header{
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-left: 30px;
+                    }
+                    #form-login-entry{
+                        float: right;
+                        margin-right: 30px;
+                        a{
+                            color: deeppink;
+                            text-decoration: none;
+
+                        }
+                    }
+                   }
+                  
+               }
+               #form-register{
+                   width: 100%;
+                   height: auto;
+                   background: white;
+                  
+                    input{
+                        border: none;
+                        font-size: 12px;
+                    }
+                   .register-word{
+                       font-size: 12px;
+                       color: orangered;
+                   }
+                   ul{
+                       width: 80%;
+                       height: auto;
+                       margin: 0 auto;
+                       background: white;
+                       li{
+                           list-style: none; 
+                           margin-top: 20px;
+                        
+                           
+                          height: 50px;
+                             
+                       }
+                       i{
+                           margin-right: 5px;
+                           margin-left: 2px;
+                       }
+                    
+                        input{
+                            outline:none;
+                        }
+                        input:focus{
+                            outline:none;
+                        }
+                       
+                       #phone-input{
+                           width: 100%;
+                           div{
+                               width: 100%;
+                               height: 100%;
+                               border: 1px solid silver;
+                               border-radius: 5px;
+                               background: white;
+                               padding: 6px 0;
+                               margin: 0 auto;
+                               input{
+                                   width: 90%;
+                               }
+                           }
+                       }
+                       #identify-input{
+                        width: 100%;
+                        overflow: hidden;
+                        div{
+                            width: 50%;
+                            height: 100%;
+                            border: 1px solid silver;
+                            background: white;
+                            border-radius: 5px;
+                            padding: 6px 0;
+                            float: left;
+                        }
+                        input{
+                            width: 85%;
+                        }
+                        button{
+                            float: right;
+                            width: 30%;
+                            height: 38px;
+                            font-size: 12px;
+                            color: deeppink;
+                            background: silver;
+                            border: none;
+                            margin-right: 20px;
+                            border-radius: 5px;
+                        }
+                    }
+                    #password-input{
+                        width: 100%;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid silver;
+                            background: white;
+                            border-radius: 5px;
+                            padding: 6px 0;
+                            margin: 0 auto;
+                            input{
+                                width: 90%;
+                            }
+                        }
+                    }
+                    #confirm-input{
+                        width: 100%;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid silver;
+                            border-radius: 5px;
+                            background: white;
+                            padding: 6px 0;
+                            margin: 0 auto;
+                            input{
+                                width: 90%;
+                            }
+                        }
+                    }
+                    #policy{
+                        width: 100%;
+                        div{
+                            
+                            font-size: 12px;
+                            padding: 0 4px;
+
+                        }
+                    }
+                    #submit{
+                        width: 100%;
+                        height: 50px;
+                        margin-bottom: 30px;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            button{
+                                width: 100%;
+                                height: 100%;
+                                background: deeppink;
+                                color: white;
+                                font-size: 18px;
+                                text-align: center;
+                                border: none;  
+                                border-radius: 5px;
+
+                            }
+                        }
+                       
+                    }
+                    #congratulation{
+                        text-align: center;
+                        font-size: 16px;
+                        color: deeppink;
+                        font-weight: 600;
+                        display: none;
+                    }
+                    #password-level{
+                        font-size: 16px;
+
+                    }
+                    
+                   }
+               }
+
+           }
+       }
+    }
+}
+
+
+#footer-background{
+    width: 100%;
+    height: 78px;
+
+    #footer{
+        width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+        
+        #footer-content{
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            font-size: 12px;
+            text-align: center;
+            color: black;
+            padding-top: 20px;
+        }
+    }
+}
+
+
+
+
+

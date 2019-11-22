@@ -17,6 +17,7 @@ require.config({
 
 require(["select-city","index","category","nav","rightmenu","goodsAnime","highwheel"],function(selectCity,index,category,nav,rightmenu,goodsAnime,highwheel){
      nav.ajax();
+     index.cal();
      highwheel.highwheel();
     selectCity.buttonSwitch();
     selectCity.ajax();

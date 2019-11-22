@@ -20,7 +20,8 @@ require.config({
 require(["select-city","index","category","nav","rightmenu","goodsAnime","image","addcart"],function(selectCity,index,category,nav,rightmenu,goodsAnime,image,addcart){
     nav.ajax();
     nav.showdata();
-    image.imagemove()
+    image.imagemove();
+    index.cal();
    selectCity.buttonSwitch();
    selectCity.ajax();
    selectCity.select();

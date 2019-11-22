@@ -3,7 +3,8 @@ require.config({
         "jquery":"jquery-1.11.3",
         "jquery-cookie":"jquery.cookie",
         "datagather":"datagather",
-        "shoppingcart":"shoppingcart"
+        "shoppingcart":"shoppingcart",
+        "index":"index",
         
     },
     shim: {
@@ -11,9 +12,10 @@ require.config({
     }
 })
 
-require(["datagather","shoppingcart"],function(datagather,shoppingcart){
+require(["datagather","shoppingcart","index"],function(datagather,shoppingcart,index){
     datagather.datagather();
     shoppingcart.time();
-    datagather.cal()
+    datagather.cal();
+    index.cal();
 
 })

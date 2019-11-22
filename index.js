@@ -1,4 +1,4 @@
-define(["jquery"],function($){
+define(["jquery","jquery-cookie"],function($){
 function headerClick(){
    $("#login").on("mouseenter",function(){
         $("#login-div").show()
@@ -157,11 +157,31 @@ function doubleNum(n){
         return n;
     }
 }
+function cal(){
+    var cookiestr=$.cookie("goods");
+    if(cookiestr){
+        var cookiearr=JSON.parse(cookiestr);
+        var sum=0;
+       
+        for(var i =0; i<cookiearr.length;i++){
+            sum+=cookiearr[i].num
+           
+        }
+        $("#logo-cart-num").html(sum)
+    }else{
+        $("#logo-cart-num").html(0)
+    }
 
+    $("#logo-cart").find("span").click(function(){
+        location.assign("shoppingcar.html")
+    })
+    
+}
 
 return{
     headerClick:headerClick,
-    time:time
+    time:time,
+    cal:cal
 }
 
 })

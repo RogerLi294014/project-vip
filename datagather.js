@@ -1,16 +1,19 @@
 define(["jquery","jquery-cookie"],function(){
     function datagather(){
-        
+        //购物车页数据动态加载
+       
         $.ajax({
             type:"get",
             url:"../data/highwheel.json",
             success:function(){
                 var cookiestr=$.cookie("goods");
                 if(cookiestr){
+                  
+                   
                     var cookiearr=JSON.parse(cookiestr);
                     
                     for(var i=0 ;i<cookiearr.length;i++){
-                        
+                       
                         var node =$(`<li>
                         <div class="product-content">
                             <div class="product-image"><img src="${cookiearr[i].picture}" alt=""></div>
@@ -43,7 +46,7 @@ define(["jquery","jquery-cookie"],function(){
             }
 
         })
-
+        //购物车页数量加减
         $("#shoppingcar-container-ul").on("click",".product-num-container button",function(){
             var id=$(this).closest("li").index()
            
@@ -56,12 +59,12 @@ define(["jquery","jquery-cookie"],function(){
                 if(i == id){
                     if(this.innerHTML==="+"){
                     cookiearr[i].num++
-                    cookiearr[i].overall= parseInt(cookiearr[i].num)*parseInt(cookiearr[i].nprice)
+                    cookiearr[i].overall= Number(cookiearr[i].num)*Number(cookiearr[i].nprice)
                 }else if(cookiearr[i].num==1&& this.innerHTML==="-"){
                     alert("不能再减少，数量已为最小")
                 }else{
                     cookiearr[i].num--
-                    cookiearr[i].overall= parseInt(cookiearr[i].num)*parseInt(cookiearr[i].nprice)
+                    cookiearr[i].overall= Number(cookiearr[i].num)*Number(cookiearr[i].nprice)
                 }
                 $(this).siblings("span").html(cookiearr[i].num)
                 $(this).closest("li").find(".product-overall").html("￥"+cookiearr[i].overall)
@@ -76,7 +79,7 @@ define(["jquery","jquery-cookie"],function(){
             cal();
             
         })
-
+        //购物车页数据删除 
         $("#shoppingcar-container-ul").on("click",".product-delete",function(){
 
            var id=$(this).closest("li").index()
@@ -106,16 +109,21 @@ define(["jquery","jquery-cookie"],function(){
     function cal(){
         var cookiestr=$.cookie("goods");
         if(cookiestr){
+            $("#count-number").find("#countnum").empty();
+            $("#count-number").find("#count-value").empty();
             var cookiearr=JSON.parse(cookiestr);
             var sum=0;
             var total=0;
             for(var i =0; i<cookiearr.length;i++){
-                sum+=cookiearr[i].num
-                total+=cookiearr[i].overall
+                sum+= Number(cookiearr[i].num)
+                total+=Number(cookiearr[i].overall)
             }
            
             $("#count-number").find("#countnum").html(sum);
             $("#count-number").find("#count-value").html(total);
+        }else if(!cookiestr){
+            $("#count-number").find("#countnum").html(0);
+            $("#count-number").find("#count-value").html(0)
         }
        
         

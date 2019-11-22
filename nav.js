@@ -87,8 +87,10 @@ define(["jquery"],function($){
                         //新价格
                         if(price==""){
                             $("#info-newprice").html(specialprice)
+                            $(".menu-hidden").find("span").html(specialprice)
                         }else if(specialprice==""){
                           $("#info-newprice").html(price)
+                          $(".menu-hidden").find("span").html(price)
                         }
                         
                         $("#info-oldprice").html(oldprice)

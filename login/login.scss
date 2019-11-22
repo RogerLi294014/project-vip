@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#header-background{
+    width: 100%;
+    height: 100px;
+    background: white;
+    #header{
+        width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+        background: white;
+        div{
+            float: left;
+        }
+        #header-logo{
+            width: 300px;
+            height: 100%;
+            padding-top: 10px;
+            
+            a{
+                display: block;
+                width: 135px;
+                height: 90px;
+                line-height: 100px;
+                position: relative;
+                overflow: hidden;
+                img{
+                   left:-300px;
+                   top: -65px;
+                    position: absolute;
+                }
+            }
+        }
+        #header-other{
+            width: auto;
+            height: 100%;
+            float: right;
+            div{
+                width: 304px;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+#login-background{
+    width: 100%;
+    height: 650px;
+    background: url("https://a.vpimg2.com/upload/flow/2019/01/29/88/15487540172274.jpg") no-repeat center top;
+    overflow: hidden;
+    #login{
+        width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+       #login-form{
+           width: 360px;
+           float: right;
+           height: auto;
+           background: white;
+           border-radius: 5px;
+           margin-top: 50px;
+           #form-background{
+               margin: 0 auto;
+               width: 100%;
+               height: auto;
+               background: white;
+               border-radius: 5px;
+
+               #form-switch{
+                   width: 100%;
+                   height: 50px;
+                   overflow: hidden;
+                   border-bottom: 1px solid silver;
+                   #form-login-block{
+                       width: 100%;
+                       height: 100%;
+                       margin: 0 auto;
+                       overflow: hidden;
+                      
+                       div{
+                        float: left;
+                        height: 100%;
+                        line-height: 50px;
+                        text-align:center;   
+                    }
+                    #form-login-header{
+                        font-size: 18px;
+                        width: 49.5%;
+                        font-weight: 700;
+                        float: left;
+                        cursor: pointer;
+                        border-right: 1px solid silver  ;
+                        
+                    }
+                    #form-login-header:hover{
+                        color: deeppink;
+                    }
+                    #form-login-entry{
+                        float: left;
+                        width: 49.5%;
+                        font-size: 18px;
+                        font-weight: 700;
+                        cursor: pointer;
+                        color: deeppink;
+                       
+                    }
+                    #form-login-entry:hover{
+                        color: deeppink;
+                    }
+                   }
+                  
+               }
+               #form-login{
+                   width: 100%;
+                   height: auto;
+                   background: white;
+                  
+                    input{
+                        border: none;
+                        font-size: 12px;
+                    }
+                   .login-word{
+                       font-size: 12px;
+                       color: orangered;
+                   }
+                   ul{
+                       width: 80%;
+                       height: auto;
+                       margin: 0 auto;
+                       background: white;
+                       li{
+                           list-style: none; 
+                           margin-top: 20px;
+                          height: auto;
+                          
+                             
+                       }
+                       i{
+                           margin-right: 5px;
+                           margin-left: 2px;
+                       }
+                    
+                        input{
+                            outline:none;
+                            font-size: 15px;
+                            height: 50%;
+                        }
+                        input:focus{
+                            outline:none;
+                        }
+                       
+                       #phone-input{
+                           width: 100%;
+                           height: 50px;
+                           div{
+                               width: 100%;
+                               height: 100%;
+                               border: 1px solid silver;
+                               border-radius: 5px;
+                               background: white;
+                               padding: 6px 0;
+                               margin: 0 auto;
+                               input{
+                                   width: 90%;
+                                   
+                                   height: 100%;
+                               }
+                           }
+                       }
+                     
+                    #password-input{
+                        width: 100%;
+                        height: 50px;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid silver;
+                            background: white;
+                            border-radius: 5px;
+                            padding: 6px 0;
+                            margin: 0 auto;
+                            
+                            input{
+                                width: 90%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    
+                    #option{
+                        width: 100%;
+                        height: 100%;
+                        div{
+                            height: auto;
+                            font-size: 14px;
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
+                            a:hover{
+                                color: deeppink;
+                            }
+                         li{
+                             float: left;
+                         }   
+                         span{
+                             float: right;
+                         }
+                          
+                        }
+                    }
+                    #submit{
+                        width: 100%;
+                        height: 50px;
+                        margin-bottom: 30px;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            button{
+                                width: 100%;
+                                height: 100%;
+                                background: deeppink;
+                                color: white;
+                                font-size: 18px;
+                                text-align: center;
+                                border: none;  
+                                border-radius: 5px;
+
+                            }
+                        }
+                       
+                    }
+                    #congratulation{
+                        text-align: center;
+                        font-size: 16px;
+                        color: deeppink;
+                        font-weight: 600;
+                        display: none;
+                    }
+                    #password-level{
+                        font-size: 16px;
+
+                    }
+                    
+                   }
+                   #QRcode{
+                        width: 100%;
+                        height: 100%; 
+                        display: none; 
+                        margin: 20px 0; 
+                    div {
+                            width: 360px;
+                            height: auto;
+                            margin: 0 auto;
+                            text-align: center;
+                            padding-bottom: 10px;
+                           
+                            #QRcode-image{
+                                width: 150px;
+                                height: auto;
+                                margin:0 auto ;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            span{
+                                color: deeppink;
+                            }
+                            .iconfont{
+                                color: black;
+                            }
+                       }
+                       
+                   }
+               }
+
+               #login-option{
+                    width: 360px;
+                    height: auto;
+                #login-other{
+                        width: 80%;
+                        margin: 0 auto;
+                        span{
+                            display: inline-block;
+                            width: 60%;
+                            height: auto;
+                            text-align: left;
+                            a{
+                                padding-right: 5px;
+                                height: auto;
+                                display: inline-block;
+                                border-right: 1px solid silver;
+                           font-size: 12px;
+                           text-decoration: none;
+                           color: black;
+                            }
+                            a:hover{
+                                color: deeppink;
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            font-size: 12px;
+                            text-align: right;
+                            padding-right: 11px;
+                            text-decoration: none;
+                            color: black;
+                        }
+                        a:hover{
+                            color: deeppink;
+                        }
+                       
+                    }
+                    #login-extra{
+                        width: 80%;
+                        margin:0 auto;
+                        display: none;
+                        span{
+                            display: inline-block;
+                            width: 100%;
+                            a{
+                                border-right: 1px solid silver;
+                                font-size: 12px;
+                                padding-right: 5px;
+                                color: black;
+                                text-decoration: none;
+                            }
+                            a:hover{
+                                color: deeppink;
+                            }
+                        }
+                    }
+               }
+
+           }
+       }
+    }
+}
+
+
+#footer-background{
+    width: 100%;
+    height: 78px;
+
+    #footer{
+        width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+        
+        #footer-content{
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            font-size: 12px;
+            text-align: center;
+            color: black;
+            padding-top: 20px;
+        }
+    }
+}
+

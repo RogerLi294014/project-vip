@@ -1,7 +1,7 @@
 define(["jquery"],function($){
 
     function goodsD(){
-
+        //商品页数据动态加载
         $.ajax({
             type:"get",
             url:"../data/goods.json",

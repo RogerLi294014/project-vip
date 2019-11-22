@@ -741,6 +741,7 @@
         text-align: center; }
         #content-background #content #content-menu .menu-hidden button {
           height: 100%;
+          width: 100px;
           background-color: deeppink;
           color: white;
           border: none;

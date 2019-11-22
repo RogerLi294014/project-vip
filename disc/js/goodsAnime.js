@@ -1,5 +1,5 @@
 define(["jquery"],function($){
-
+//商品触摸动画
 function goodsAnime(){
 
 var lis=$("#goods ul")
@@ -17,6 +17,7 @@ lis.on("mouseenter","li",function(){
         })
 })
 }
+
 
     return{
      goodsAnime:goodsAnime
