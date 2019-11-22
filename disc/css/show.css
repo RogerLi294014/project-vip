@@ -597,9 +597,9 @@
         #product #imageinfo #info #info-price span {
           line-height: 90px; }
         #product #imageinfo #info #info-price #info-newprice {
-          color: deeppink; }
-          #product #imageinfo #info #info-price #info-newprice span {
-            font-size: 40px; }
+          color: deeppink;
+          font-size: 40px;
+          font-weight: 600; }
         #product #imageinfo #info #info-price #info-oldprice {
           text-decoration: line-through;
           color: gray;

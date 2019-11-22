@@ -47,13 +47,13 @@ define(["jquery"],function($){
 
     }
     function buttonselect(){
-        var colorbtn=$("#info-color-select").find("button")
-        var sizebtn=$("#info-size-select").find("button")
-        colorbtn.click(function(){
+        var colorbtn=$("#info-color-select")
+        var sizebtn=$("#info-size-select")  
+        colorbtn.on("click","button",function(){
             $(this).addClass("selected").siblings().removeClass("selected")
 
         })
-        sizebtn.click(function(){
+        sizebtn.on("click","button",function(){
             $(this).addClass("selected").siblings().removeClass("selected")
         })
         var num=1;

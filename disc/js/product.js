@@ -28,7 +28,7 @@ require(["select-city","index","category","nav","rightmenu","goodsAnime","highwh
     rightmenu.rightmenu()
     goodsAnime.goodsAnime();
     highwheel.brandClick();
-    highwheel.linkclick();
+    
     
 })
 

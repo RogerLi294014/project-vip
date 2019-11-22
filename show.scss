@@ -844,9 +844,8 @@
                 }
            #info-newprice{
                color: deeppink;
-               span{
-                   font-size: 40px;
-               }
+               font-size: 40px;
+               font-weight: 600;
            }
            #info-oldprice{
                text-decoration: line-through;

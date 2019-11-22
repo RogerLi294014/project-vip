@@ -59,7 +59,7 @@ define(["jquery"],function($){
     return{
         highwheel:highwheel,
         brandClick:brandClick,
-        linkclick:linkclick
+        
     }
 
 })

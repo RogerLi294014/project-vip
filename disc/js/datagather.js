@@ -10,6 +10,7 @@ define(["jquery","jquery-cookie"],function(){
                     var cookiearr=JSON.parse(cookiestr);
                     console.log(cookiearr)
                     for(var i=0 ;i<cookiearr.length;i++){
+                        
                         var node =$(`<li>
                         <div class="product-content">
                             <div class="product-image"><img src="${cookiearr[i].picture}" alt=""></div>
@@ -50,6 +51,8 @@ define(["jquery","jquery-cookie"],function(){
             var cookiearr= JSON.parse($.cookie("goods"));
             
             for(var i=0;i<cookiearr.length;i++){
+             
+
                 if(i == id){
                     if(this.innerHTML==="+"){
                     cookiearr[i].num++
@@ -61,7 +64,7 @@ define(["jquery","jquery-cookie"],function(){
                     cookiearr[i].overall= parseInt(cookiearr[i].num)*parseInt(cookiearr[i].nprice)
                 }
                 $(this).siblings("span").html(cookiearr[i].num)
-                $(this).closest("li").find(".product-overall").html(cookiearr[i].overall)
+                $(this).closest("li").find(".product-overall").html("￥"+cookiearr[i].overall)
                
                 $.cookie("goods",JSON.stringify(cookiearr),{
                     expires:7
