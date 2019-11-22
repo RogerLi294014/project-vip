@@ -8,7 +8,7 @@ define(["jquery"],function($){
         var timer=null;
         timer=setInterval(function(){
         i--
-        console.log(doubleNum(i % 60))
+        
         sec.html(doubleNum(i % 60)) 
         min.html(doubleNum(parseInt(i / 60) % 60)) 
         if(i==0){

@@ -14,5 +14,6 @@ require.config({
 require(["datagather","shoppingcart"],function(datagather,shoppingcart){
     datagather.datagather();
     shoppingcart.time();
+    datagather.cal()
 
 })

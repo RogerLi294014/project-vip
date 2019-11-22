@@ -8,7 +8,7 @@ define(["jquery","jquery-cookie"],function(){
                 var cookiestr=$.cookie("goods");
                 if(cookiestr){
                     var cookiearr=JSON.parse(cookiestr);
-                    console.log(cookiearr)
+                    
                     for(var i=0 ;i<cookiearr.length;i++){
                         
                         var node =$(`<li>
@@ -73,14 +73,14 @@ define(["jquery","jquery-cookie"],function(){
 
             }
            
-
+            cal();
             
         })
 
         $("#shoppingcar-container-ul").on("click",".product-delete",function(){
 
            var id=$(this).closest("li").index()
-           console.log(id)
+           
            var cookiearr=JSON.parse($.cookie("goods"));
            for(var i=0;i<cookiearr.length;i++){
                if(i == id){
@@ -97,12 +97,32 @@ define(["jquery","jquery-cookie"],function(){
                    expires:7
                })
            }
+           cal();
         })
+       
        
 
     }
+    function cal(){
+        var cookiestr=$.cookie("goods");
+        if(cookiestr){
+            var cookiearr=JSON.parse(cookiestr);
+            var sum=0;
+            var total=0;
+            for(var i =0; i<cookiearr.length;i++){
+                sum+=cookiearr[i].num
+                total+=cookiearr[i].overall
+            }
+           
+            $("#count-number").find("#countnum").html(sum);
+            $("#count-number").find("#count-value").html(total);
+        }
+       
+        
+    } 
 
     return{
-        datagather:datagather
+        datagather:datagather,
+        cal:cal
     }
 })
