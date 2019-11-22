@@ -8,16 +8,18 @@ require.config({
         "nav":"nav",
         "rightmenu":"rightmenu",
         "goodsAnime":"goodsAnime",
-       
+        "image":"image",
+        "addcart":"addcart",
+
     },
     shim: {
         "jquery-cookie": ["jquery"],
     }
 })
 
-require(["select-city","index","category","nav","rightmenu","goodsAnime"],function(selectCity,index,category,nav,rightmenu,goodsAnime){
+require(["select-city","index","category","nav","rightmenu","goodsAnime","image","addcart"],function(selectCity,index,category,nav,rightmenu,goodsAnime,image,addcart){
     nav.ajax();
-    
+    image.imagemove()
    selectCity.buttonSwitch();
    selectCity.ajax();
    selectCity.select();
@@ -27,6 +29,11 @@ require(["select-city","index","category","nav","rightmenu","goodsAnime"],functi
    category.touch();
    rightmenu.rightmenu()
    goodsAnime.goodsAnime();
-   
+   image.imagechange();
+   image.buttonselect();
+   image.menulist();
+   image.menutop();
+   image.hiddensize();
+   addcart.addcart();
    
 })

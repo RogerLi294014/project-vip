@@ -740,6 +740,24 @@
                 img{
                     width: 100%;
                     height: 100%;
+                    display: none;
+                }
+                .image-bigger{
+                    display: block;
+                }
+            }
+            #image-shower{
+                width: 420px;
+                height: 420px;
+                position: relative;
+                overflow: hidden;
+                display: none;
+                img{
+                    height: 1680px;
+                    width: 1680px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
                 }
             }
 
@@ -750,9 +768,22 @@
             height: 64px;
             
             li{
+                
                 float: left;
                 list-style: none;
-                margin: 5px 3px 0;
+                margin: 5px 2px 0;
+               
+                a{  
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                    height: 100%;
+                    width: 100%;
+                    border: 1px solid white;
+                }
+                a:hover{
+                    border: 1px solid deeppink;
+                }
             }
         }
         #image-info{
@@ -882,10 +913,17 @@
                 button{
                   font-size: 12px;
                   background: white;
-                  border: 1px solid deeppink;
+                  border: 1px solid silver;
                   padding: 5px 5px;
                   margin: 0 5px;
               }
+              .selected{
+                border: 1px solid deeppink;
+              }
+              button:hover{
+                border: 1px solid deeppink;
+            }
+            button:focus{outline:0;} 
             }
             }
             #info-size{
@@ -899,11 +937,23 @@
                 button{
                   font-size: 12px;
                   background: white;
-                  border: 1px solid deeppink;
+                  border: 1px solid silver;
                   padding: 5px 5px;
                   margin: 0 10px;
                   width: 50px;
               }
+              .selected{
+                border: 1px solid deeppink;
+              }
+              button:hover{
+                  border: 1px solid deeppink;
+              }
+              
+              button:active{
+                border: 1px solid deeppink;
+              }
+              button:focus{outline:0;} 
+              
             }
                 
             }
@@ -917,19 +967,32 @@
                 #info-num-number{
                     width: auto;
                    
-                    background: white;
+                    background: #f9f8f8;
                     border: 1px solid silver;
                     button{
                         width: 30px;
-                        background: silver;
-                        border: 1px solid deeppink;
+                        background: #f9f8f8;
+                       border: none;
+                    }
+                   
+                    .button-left{
+                        border-right: 0.5px solid silver;
+                    }
+                    .button-right{
+                        border-left: 0.5px solid silver;
                     }
                     span{
                         display: inline-block;
                         width: auto;
                         padding: 0 10px;
                     }
+                    
                 }
+            }
+            #info-num-0{
+                display: none;
+                margin-left: 30px;
+                color: red;
             }
             #info-buy{
                 width: 100%;
@@ -962,7 +1025,7 @@
 #content-background{
     width: 100%;
     height: auto;
-    background: black;
+    
 
 
 
@@ -970,15 +1033,37 @@
         width: 1000px;
         height: auto;
         margin: 0 auto;
-        background: aqua;
+        background: white;
         #content-menu{
+            width: 100%;
             height: 36px;
             border: 1px solid silver;
             border-bottom: 3px solid black;
+            background: white;
+            z-index: 200;
+            .menu-hidden{
+                display: none;
+                border-right: none;
+                width: 10%;
+                text-align: center;
+                button{
+                    height: 100%;
+                    background-color: deeppink;
+                    color: white;
+                    border: none;
+                    padding: 0 10px;
+                }
+            }
+            .special-price{
+                font-size:18px;
+                font-weight:700;
+                color: deeppink;
+                
+            }
             li{
                 float: left;
                 border: 1px solid silver;
-                border-bottom: 3px solid  deeppink;
+                border-bottom: 3px solid  black;
                 border-top: none;
                
                 border-left: none;
@@ -1187,7 +1272,7 @@
         #content-consult{
             width:100%;
             height:auto;
-            background: pink;
+            
             div{
                 display: block;
                 width:100%;
@@ -1220,7 +1305,45 @@
 }
 
 
+#footer{
+    height: auto;
+    width: 100%;
+    background: #f5f5f5;
 
+    #footer-content{
+        width: 1100px;
+        height: auto;
+        background-color: #f5f5f5;
+        margin: 0 auto;
+
+        #footer-image{
+            width: 100%;
+            img{
+                width: 100%;
+                display: block;
+                margin:0 auto
+            }
+        }
+
+        #footer-list{
+            dl{width: 14%;
+                display: block;
+                float: left;
+                text-align: left;
+                margin: 30px  10px  0;
+                border-right: 1px solid silver;
+                dd{
+                    font-size: 12px;
+                    a{
+                        list-style: square;
+                        color: gray;
+                    }
+                }
+            }
+        }
+       
+    }
+}
 
 #right-menu{
     width: 50px;

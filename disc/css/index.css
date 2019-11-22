@@ -28,7 +28,7 @@
         height: 283px;
         width: 470px;
         position: absolute;
-        background: olive;
+        background: white;
         left: 0;
         top: 30px;
         display: none;
@@ -81,7 +81,7 @@
           width: 302px;
           background-color: #f5f5f5;
           position: absolute;
-          left: -245px;
+          right: 0px;
           top: 19px;
           line-height: 42px;
           border: 1px solid silver;
@@ -115,7 +115,7 @@
           width: 187px;
           background-color: #f5f5f5;
           position: absolute;
-          left: -118px;
+          left: -102px;
           top: 19px;
           border: 1px solid silver;
           z-index: 103; }
@@ -137,7 +137,7 @@
         z-index: 103; }
         #header #header-nav #header-list #client ul {
           display: none;
-          width: 95px;
+          width: 98px;
           position: absolute;
           left: -1px;
           top: 19px;
@@ -155,7 +155,7 @@
         z-index: 103; }
         #header #header-nav #header-list #club ul {
           display: none;
-          width: 94px;
+          width: 110px;
           position: absolute;
           left: -1px;
           top: 19px;
@@ -173,7 +173,7 @@
         z-index: 103; }
         #header #header-nav #header-list #sale ul {
           display: none;
-          width: 82px;
+          width: 98px;
           position: absolute;
           left: -1px;
           top: 19px;

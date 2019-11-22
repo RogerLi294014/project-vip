@@ -125,9 +125,43 @@ $("#nav-more").css({
 })
 
 }
+function time(){
+    var i= 86400
+    var min=$(".min")
+    var sec=$(".sec")
+    var hour=$(".hour")
+    
+    var timer=null;
+    timer=setInterval(function(){
+    i--
+    console.log(doubleNum(i % 60))
+    sec.html(doubleNum(i % 60)) 
+    min.html(doubleNum(parseInt(i / 60) % 60)) 
+    hour.html(doubleNum(parseInt(i / 3600)))
+    if(i==0){
+        
+        setTimeout(function(){
+            window.location.reload()
+        },3000)
+    }
+
+    },1000)
+
+   
+
+}
+function doubleNum(n){
+    if(n < 10){
+        return "0" + n;
+    }else{
+        return n;
+    }
+}
+
 
 return{
-    headerClick:headerClick
+    headerClick:headerClick,
+    time:time
 }
 
 })

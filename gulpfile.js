@@ -55,13 +55,22 @@ gulp.task("scss1",function(){
     .pipe(gulp.dest("disc/css"))
     .pipe(connect.reload())
 })
+gulp.task("scss2",function(){
+    return gulp.src("shoppingcar.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("disc/css"))
+    .pipe(minifycss())
+    .pipe(rename("shoppingcar-min.css"))
+    .pipe(gulp.dest("disc/css"))
+    .pipe(connect.reload())
+})
 gulp.task("data",function(){
     return gulp.src(["*.json","!package.json"])
     .pipe(gulp.dest("disc/data"))
     .pipe(connect.reload())
 })
 
-gulp.task("combine",["copy","image","script","sass","sass1","scss","data","scss1"],function(){
+gulp.task("combine",["copy","image","script","sass","sass1","scss","data","scss1","scss2"],function(){
     console.log("Best Match!")
 })
 
@@ -74,6 +83,7 @@ gulp.task("watch",function(){
     gulp.watch("*.css",["sass1"])
     gulp.watch("product.scss",["scss"])
     gulp.watch("show.scss",["scss1"])
+    gulp.watch("shoppingcar.scss",["scss2"])
     
 })
 gulp.task("server", function(){

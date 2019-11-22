@@ -21,7 +21,7 @@ require.config({
 
 require(["select-city","index","category","tabimage","nav","like","goods","rightmenu"],function(selectCity,index,category,tabimage,nav,like,goods,rightmenu){
     nav.ajax();
-    
+    index.time();
     goods.goodsD();
     selectCity.buttonSwitch();
     selectCity.ajax();
